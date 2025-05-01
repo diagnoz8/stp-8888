@@ -1,7 +1,7 @@
 // vars
 $bgcolor: #1e1e22; // фон
-$txtcolor: #ffffff; //текст
-$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань
+$txtcolor: #ffffff; //текст ACCEPT COOKIES BG
+$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань  COOKIES BORDER HOVER
 $hovercolor: #ff222f; //кнопки
 $pressedcolor: #ff0303; //кнопки
 $gradient: linear-gradient(
@@ -9,14 +9,13 @@ $gradient: linear-gradient(
   #ff5722 1.23%,
   #ffa319 96.43%
 ); /// gradient
-
 $black: #000000;
+$bgcolor2: #1a1a1d;
+$bgcolor3: #26262a;
+$declinedCookies: #ffd8cc;
+$pressedAcceptC: #f1eedf;
+$pressedDeclineC: #ffb098;
 
-// background: #1a1a1d;
-// background: #26262a;
-// background: #ffd8cc;
-// background: #f1eedf;
-// background: #ffb098;
 // text
 body {
   background-color: $bgcolor;
