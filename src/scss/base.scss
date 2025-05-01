@@ -1,0 +1,135 @@
+// vars
+$bgcolor: #1e1e22; // фон
+$txtcolor: #ffffff; //текст
+$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань
+$hovercolor: #ff222f; //кнопки
+$pressedcolor: #ff0303; //кнопки
+$gradient: linear-gradient(
+  91.52deg,
+  #ff5722 1.23%,
+  #ffa319 96.43%
+); /// gradient
+
+background: #000000;
+
+background: #1a1a1d;
+background: #26262a;
+background: #ffd8cc;
+background: #f1eedf;
+background: #ffb098;
+// text
+body {
+  background-color: $bgcolor;
+  color: $txtcolor;
+}
+
+h1 {
+  font-family: 'Texturina', serif;
+  font-weight: 400;
+  font-size: 36px;
+
+  @media (min-width: 1200px) {
+    font-size: 64px;
+  }
+}
+
+h2 {
+  font-family: 'Texturina', serif;
+  font-weight: 400;
+  font-size: 28px;
+
+  @media (min-width: 1200px) {
+    font-size: 48px;
+  }
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+
+  @media (min-width: 1200px) {
+    font-size: 28px;
+  }
+}
+
+// Titles
+[data-font='title'] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+
+  @media (min-width: 1200px) {
+    font-size: 32px;
+  }
+}
+
+[data-font='title-small'] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+// Body text
+[data-font='body-large'] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+
+  @media (min-width: 1200px) {
+    font-size: 28px;
+  }
+}
+
+[data-font='body-medium'] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+[data-font='body'] {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+// PLAY BUTTONS
+[data-playBtn] {
+  width: 288px;
+  height: 78px;
+  border-radius: 24px;
+  padding: 24px 80px 24px 80px;
+  border-radius: 24px;
+
+  background-color: $accentcolor;
+
+  animation-delay: 800ms;
+  animation-duration: 0ms;
+
+  @media (min-width: 1200px) {
+    width: 242px;
+    padding: 24px 48px 24px 48px;
+  }
+  &:hover {
+    background-color: $hovercolor;
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+  }
+  &:focus {
+    border: 1px solid $bgcolor;
+  }
+  &:active {
+    background-color: $pressedcolor;
+  }
+}
