@@ -10,13 +10,13 @@ $gradient: linear-gradient(
   #ffa319 96.43%
 ); /// gradient
 
-background: #000000;
+$black: #000000;
 
-background: #1a1a1d;
-background: #26262a;
-background: #ffd8cc;
-background: #f1eedf;
-background: #ffb098;
+// background: #1a1a1d;
+// background: #26262a;
+// background: #ffd8cc;
+// background: #f1eedf;
+// background: #ffb098;
 // text
 body {
   background-color: $bgcolor;
