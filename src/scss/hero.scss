@@ -1,0 +1,15 @@
+[data-section='hero'] {
+  padding: 20px 16px 26px 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: $bgcolor2;
+  @media (min-width: $desktop) {
+    flex-direction: row-reverse;
+    padding: 100px 80px 100px 120px;
+    [data-font='h1'] {
+      width: 410px;
+      margin-right: 82px;
+      margin-bottom: 86px;
+    }
+  }
+}
