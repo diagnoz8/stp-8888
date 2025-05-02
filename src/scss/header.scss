@@ -8,16 +8,12 @@
 
   position: sticky;
   top: 0;
-  margin-left: auto;
-  margin-right: auto;
 
   height: 44px;
-  width: 320px;
   background: #26262a;
   box-shadow: inset 0px 4px 20px rgba(255, 107, 0, 0.7);
   z-index: 9;
   @media (min-width: $desktop) {
-    width: $desktop;
     height: 80px;
     padding: 30px 80px;
   }

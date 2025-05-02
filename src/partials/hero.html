@@ -1,1 +1,19 @@
-<section id="hero"></section>
+<section id="hero" data-section="hero">
+  <div>
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="/img/hero/hero-img.png 1x, /img/hero/hero-img@2x.png 2x"
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="/img/hero/hero-img-mob.png 1x, /img/hero/hero-img-mob@2x.png 2x"
+      />
+      <img src="/img/hero/hero-img.png" alt="" loading="lazy" />
+    </picture>
+    <div>
+      <h1 data-font="h1">Ignite Power. Blast Through!</h1>
+      <button data-playBtn></button>
+    </div>
+  </div>
+</section>

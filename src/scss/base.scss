@@ -1,9 +1,17 @@
-// text
 body {
   background-color: $bgcolor;
   color: $txtcolor;
 }
+[data-section] {
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+// text
 [data-font='h1'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
