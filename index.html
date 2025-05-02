@@ -14,40 +14,93 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/stp-8888/commonHelpers2.js"></script>
-    <link rel="stylesheet" href="/stp-8888/assets/index-68d16c68.css">
+    <link rel="stylesheet" href="/stp-8888/assets/styles-2afd93b7.css">
   </head>
   <body>
-    <header class="header"></header>
+    <header id="header" data-section="header">
+  <svg width="20" heigth="20">1</svg>
+  <ul data-list="navigation-pc" data-font="title">
+         <li><a href="#hero" >Home</a></li>
+        <li><a href="#description" >Description</a></li>
+        <li><a href="#features" >Features</a></li>
+        <li><a href="#reviews" >Reviews</a></li>
+        <li><a href="#howtoplay" >How to play</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#advantages" >Advantages</a></li>
+        <li><a href="#gallery" >Gallery</a></li>
+      </ul>
+<button type="button" data-button="burger-open" >
+    <svg width="20" height="20"></svg>
+</button>
+
+    <div data-visible="close" data-menu="burger">
+    <button type="button" data-button="burger-close" > </button>
+      <ul data-list="navigation-mob">
+        <li><a href="#hero"  >Home</a></li>
+        <li><a href="#description" >Description</a></li>
+        <li><a href="#features"   >Features</a></li>
+        <li><a href="#reviews"  >Reviews</a></li>
+        <li><a href="#howtoplay"  >How to play</a></li>
+        <li><a href="#faq"  >FAQ</a></li>
+        <li><a href="#advantages"  >Advantages</a></li>
+        <li><a href="#gallery"  >Gallery</a></li>
+      </ul>
+        <svg width="20" height="20"></svg>
+   
+    </header>
 
 
     <main>
-      <section></section>
+      <section id="hero" data-section="hero">
+  <div>
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="/stp-8888/assets/hero-img-790d42ed.png 1x, /stp-8888/assets/hero-img@2x-64452e56.png 2x"
+      />
+      <source
+        media="(min-width: 320px)"
+        srcset="/stp-8888/assets/hero-img-mob-2e24bd3f.png 1x, /stp-8888/assets/hero-img-mob@2x-94b10d35.png 2x"
+      />
+      <img src="/stp-8888/assets/hero-img-790d42ed.png" alt="" loading="lazy" />
+    </picture>
+  </div>
+  <div>
+    <h1 data-font="h1">Ignite Power. Blast Through!</h1>
+    <a
+      href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
+      data-playBtn
+      data-font="body-large"
+      >Play now</a
+    >
+  </div>
+</section>
 
-      <section></section>
+      <section id="description"></section>
 
-      <section></section>
+      <section id="features"></section>
 
-      <section></section>
+      <section id="rewiews"></section>
 
-      <section></section>
+      <section id="howToPlay"></section>
 
-      <section></section>
+      <section id="cta"></section>
 
-      <section></section>
+      <section id="faq"></section>
 
-      <section></section>
+      <section id="advantages"></section>
 
-      <section></section>
+      <section id="gallery"></section>
 
     </main>
 
-    <footer data-section="footer">
+    <footer id="footer" data-section="footer">
   <ul data-list="footer">
-    <li data-font="body"><a href="../src/privacy.html">🔒 Privacy Policy</a></li>
+    <li data-font="body"><a href="/privacy.html">🔒 Privacy Policy</a></li>
     <li data-font="body">
-      <a href="../src/terms.html">📜 Terms and Conditions</a>
+      <a href="/terms.html">📜 Terms and Conditions</a>
     </li>
-    <li data-font="body"><a href="../src/cookies.html">🍪 Cookie Policy</a></li>
+    <li data-font="body"><a href="/cookies.html">🍪 Cookie Policy</a></li>
   </ul>
   <p data-font="body">© 2025 fbjocifewc.xyz - All rights reserved.</p>
 </footer>
