@@ -1,53 +1,43 @@
-// vars
-$bgcolor: #1e1e22; // фон
-$txtcolor: #ffffff; //текст ACCEPT COOKIES BG
-$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань  COOKIES BORDER HOVER
-$hovercolor: #ff222f; //кнопки
-$pressedcolor: #ff0303; //кнопки
-$gradient: linear-gradient(
-  91.52deg,
-  #ff5722 1.23%,
-  #ffa319 96.43%
-); /// gradient
-$black: #000000;
-$bgcolor2: #1a1a1d;
-$bgcolor3: #26262a;
-$declinedCookies: #ffd8cc;
-$pressedAcceptC: #f1eedf;
-$pressedDeclineC: #ffb098;
-
-// text
 body {
   background-color: $bgcolor;
   color: $txtcolor;
 }
+[data-section] {
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
 
-h1 {
+  @media (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+// text
+[data-font='h1'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
   font-size: 36px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop) {
     font-size: 64px;
   }
 }
 
-h2 {
+[data-font='h2'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
   font-size: 28px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop) {
     font-size: 48px;
   }
 }
 
-h3 {
+[data-font='h3'] {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 18px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop) {
     font-size: 28px;
   }
 }
@@ -56,51 +46,49 @@ h3 {
 [data-font='title'] {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 22px;
+  @include font(22, 30);
 
-  @media (min-width: 1200px) {
-    font-size: 32px;
+  @media (min-width: $desktop) {
+    font-family: 'Texturina', serif;
+    font-weight: 500;
+    @include font(20, 20);
   }
 }
 
 [data-font='title-small'] {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 16px;
-
-  @media (min-width: 1200px) {
-    font-size: 20px;
-  }
+  @include font(16, 30);
 }
 
 // Body text
 [data-font='body-large'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  @include font(20, 20);
 
-  @media (min-width: 1200px) {
-    font-size: 28px;
+  @media (min-width: $desktop) {
+    @include font(36, 36);
   }
 }
 
 [data-font='body-medium'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  @include font(16, 20);
 
-  @media (min-width: 1200px) {
-    font-size: 20px;
+  @media (min-width: $desktop) {
+    @include font(32, 30);
   }
 }
 
 [data-font='body'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  @include font(14, 14);
 
-  @media (min-width: 1200px) {
-    font-size: 18px;
+  @media (min-width: $desktop) {
+    @include font(20, 20);
   }
 }
 // PLAY BUTTONS
@@ -110,13 +98,16 @@ h3 {
   border-radius: 24px;
   padding: 24px 80px 24px 80px;
   border-radius: 24px;
-
+  color: $txtcolor;
   background-color: $accentcolor;
 
   animation-delay: 800ms;
   animation-duration: 0ms;
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    @include font(24, 24);
     width: 242px;
     padding: 24px 48px 24px 48px;
   }
