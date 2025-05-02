@@ -105,6 +105,9 @@ body {
   animation-duration: 0ms;
 
   @media (min-width: $desktop) {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    @include font(24, 24);
     width: 242px;
     padding: 24px 48px 24px 48px;
   }

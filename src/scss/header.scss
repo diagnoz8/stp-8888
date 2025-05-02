@@ -33,6 +33,7 @@
 }
 [data-menu='burger'] {
   background-color: $bgcolor;
+  position: absolute;
 }
 [data-visible='close'] {
   display: none;
