@@ -8,17 +8,20 @@
   height: 210px;
   padding-top: 40px;
   padding-bottom: 16px;
-  background-image: url('/img/footer-bg.png');
+  background-image: image-set(
+    url('/img/footer-bg.png') 1x,
+    url('/img/footer-bg@2x.png') 2x
+  );
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  @media (min-width: 1200px) {
-    width: 1200px;
+  @media (min-width: $desktop) {
+    width: $desktop;
     height: 180px;
-    padding-left: 80px;
-    padding-right: 80px;
+    // padding-left: 80px;
+    // padding-right: 80px;
     padding-top: 80px;
   }
 }
@@ -29,12 +32,12 @@
   height: 92px;
   gap: 16px;
   margin-bottom: 32px;
-  @media (min-width: 1200px) {
-    width: 290px;
+  @media (min-width: $desktop) {
+    gap: 0;
     height: 29px;
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 18px;
-    width: 1200px;
+    width: $desktop;
   }
 }

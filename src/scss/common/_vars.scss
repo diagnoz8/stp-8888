@@ -1,4 +1,16 @@
-$_main_color: #242424;
-$_main_bg_color: rgba(255, 255, 255, 0.87);
-$_header_color: #747bff;
-$_header_accent_color: red;
+$bgcolor: #1e1e22; // фон
+$txtcolor: #ffffff; //текст ACCEPT COOKIES BG
+$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань  COOKIES BORDER HOVER
+$hovercolor: #ff222f; //кнопки
+$pressedcolor: #ff0303; //кнопки
+$gradient: linear-gradient(
+  91.52deg,
+  #ff5722 1.23%,
+  #ffa319 96.43%
+); /// gradient
+$black: #000000;
+$bgcolor2: #1a1a1d;
+$bgcolor3: #26262a;
+$declinedCookies: #ffd8cc;
+$pressedAcceptC: #f1eedf;
+$pressedDeclineC: #ffb098;
