@@ -35,6 +35,20 @@
     display: none;
   }
 }
+[data-menu='burger'] {
+  background-color: $bgcolor;
+}
 [data-visible='close'] {
   display: none;
+}
+[data-list='navigation-mob'] {
+  width: 206px;
+  height: 352px;
+  padding-top: 40px;
+  margin-left: auto;
+  font-family: 'Texturina';
+  font-weight: 500;
+  @include font(20, 20);
+}
+[data-button='burger-close'] {
 }
