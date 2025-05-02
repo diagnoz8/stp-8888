@@ -30,7 +30,7 @@
     gap: 16px;
   }
 }
-[data-button='burger'] {
+[data-button='burger-open'] {
   @media (min-width: $desktop) {
     display: none;
   }
