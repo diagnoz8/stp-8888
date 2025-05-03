@@ -92,6 +92,15 @@ body {
   }
 }
 // PLAY BUTTONS
+@keyframes btnAnimation {
+  from {
+    background-color: $accentcolor;
+  }
+  to {
+    background-color: $accentcolor2;
+    // border: 3px solid $pressedAcceptC;
+  }
+}
 [data-playBtn] {
   width: 288px;
   height: 78px;
@@ -100,10 +109,12 @@ body {
   border-radius: 24px;
   color: $txtcolor;
   background-color: $accentcolor;
-
-  animation-delay: 800ms;
-  animation-duration: 0ms;
-
+  animation-name: btnAnimation;
+  animation-duration: 600ms;
+  animation-delay: 600ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
   @media (min-width: $desktop) {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -115,9 +126,8 @@ body {
     padding: 24px 48px 24px 48px;
   }
   &:hover {
-    background-color: $hovercolor;
-    animation-timing-function: ease-in-out;
-    animation-duration: 300ms;
+    animation: none;
+    background-color: $accentcolor;
   }
   &:focus {
     border: 1px solid $bgcolor;
