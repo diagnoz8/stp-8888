@@ -26,35 +26,42 @@
     gap: 16px;
   }
 }
-[data-button='burger-open'] {
-  @media (min-width: $desktop) {
-    display: none;
-  }
-}
 [data-menu='burger'] {
   background-color: $bgcolor;
   position: absolute;
-  top: 0%;
-  right: 0%;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 1s ease-in-out;
+  top: 44px;
+  right: 0;
 }
 [data-visible='open'] {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition: opacity 1s ease-out;
+}
+[data-visible='close'] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s ease-in, visibility 0s linear 1s;
 }
 [data-list='navigation-mob'] {
   width: 206px;
   height: 352px;
-  padding-top: 40px;
-  margin-left: auto;
+  padding: 40px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
   font-family: 'Texturina';
   font-weight: 500;
   @include font(20, 20);
 }
 [data-button='burger-close'] {
   z-index: 10;
+}
+[data-button] {
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
