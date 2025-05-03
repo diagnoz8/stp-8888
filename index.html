@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/src/public/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/stp-8888/assets/favicon-c17dd3bc.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Fireball Heroes</title>
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,11 +14,13 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/stp-8888/commonHelpers2.js"></script>
-    <link rel="stylesheet" href="/stp-8888/assets/styles-2afd93b7.css">
+    <link rel="stylesheet" href="/stp-8888/assets/styles-864b5ccb.css">
   </head>
   <body>
     <header id="header" data-section="header">
-  <svg width="20" heigth="20">1</svg>
+  <svg width="20" heigth="20">
+  <use href=""></use>
+  </svg>
   <ul data-list="navigation-pc" data-font="title">
          <li><a href="#hero" >Home</a></li>
         <li><a href="#description" >Description</a></li>
@@ -30,11 +32,12 @@
         <li><a href="#gallery" >Gallery</a></li>
       </ul>
 <button type="button" data-button="burger-open" >
-    <svg width="20" height="20"></svg>
+    <svg width="20" height="20" >
+      <use data-el="burger-use" href="/img/icons.svg#burger-menu"></use>
+    </svg>
 </button>
 
-    <div data-visible="close" data-menu="burger">
-    <button type="button" data-button="burger-close" > </button>
+    <div data-menuvisible="close" data-menu="burger">
       <ul data-list="navigation-mob">
         <li><a href="#hero"  >Home</a></li>
         <li><a href="#description" >Description</a></li>
@@ -44,9 +47,7 @@
         <li><a href="#faq"  >FAQ</a></li>
         <li><a href="#advantages"  >Advantages</a></li>
         <li><a href="#gallery"  >Gallery</a></li>
-      </ul>
-        <svg width="20" height="20"></svg>
-   
+      </ul>   
     </header>
 
 
@@ -67,12 +68,13 @@
   </div>
   <div>
     <h1 data-font="h1">Ignite Power. Blast Through!</h1>
-    <a
-      href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
-      data-playBtn
-      data-font="body-large"
-      >Play now</a
-    >
+    <button data-playBtn>
+      <a
+        href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
+        data-font="body-large"
+        >Play now</a
+      >
+    </button>
   </div>
 </section>
 
