@@ -34,9 +34,17 @@
 [data-menu='burger'] {
   background-color: $bgcolor;
   position: absolute;
+  top: 0%;
+  right: 0%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
 }
-[data-visible='close'] {
-  display: none;
+[data-visible='open'] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 [data-list='navigation-mob'] {
   width: 206px;
@@ -48,4 +56,5 @@
   @include font(20, 20);
 }
 [data-button='burger-close'] {
+  z-index: 10;
 }

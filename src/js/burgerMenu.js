@@ -1,11 +1,9 @@
-const openBtnEl = document.querySelector('[data-button="burger-open"]');
-const closeBtnEl = document.querySelector('[data-button="burger-close"]');
+const burgerBtnEl = document.querySelector('[data-button]');
 const burgerMenuEl = document.querySelector('[data-visible]');
 
-openBtnEl.addEventListener('click', e => {
-  burgerMenuEl.dataset.visible = 'open';
-});
+burgerBtnEl.addEventListener('click', e => {
+  const isOpen = burgerMenuEl.dataset.visible === 'open';
 
-closeBtnEl.addEventListener('click', e => {
-  burgerMenuEl.dataset.visible = 'close';
+  burgerMenuEl.dataset.visible = isOpen ? 'close' : 'open';
+  burgerBtnEl.dataset.button = isOpen ? 'burger-open' : 'burger-close';
 });
