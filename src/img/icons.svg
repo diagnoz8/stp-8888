@@ -12,6 +12,9 @@
 <symbol id="icon-icon-" viewBox="0 0 32 32">
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M3.556 31.554l-3.111-3.111 12.444-12.444-12.444-12.444 3.111-3.111 12.444 12.444 12.444-12.444 3.111 3.111-12.444 12.444 12.444 12.444-3.111 3.111-12.444-12.444-12.444 12.444z"></path>
 </symbol>
+<symbol id="icon-arrow" viewBox="0 0 19 32">
+<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.12" d="M16 28.8l-12.8-12.8 12.8-12.8"></path>
+</symbol>
 </defs>
 </svg>
 
