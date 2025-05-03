@@ -1,11 +1,21 @@
 const burgerBtnEl = document.querySelector('[data-button]');
-const burgerMenuEl = document.querySelector('[data-visible]');
+const burgerMenuEl = document.querySelector('[data-menu="burger"]');
 const burgerUseEl = document.querySelector('[data-el="burger-use"]');
+const sections = document.querySelectorAll('[data-section]');
 burgerBtnEl.addEventListener('click', e => {
-  const isOpen = burgerMenuEl.dataset.visible === 'open';
+  const isOpen = burgerMenuEl.dataset.menuvisible === 'open';
 
-  burgerMenuEl.dataset.visible = isOpen ? 'close' : 'open';
-  burgerBtnEl.dataset.button = isOpen ? 'burger-open' : 'burger-close';
-  const iconId = isOpen ? '#burger-menu' : '#icon-icon-';
-  burgerUseEl.setAttribute('href', `/img/icons.svg${iconId}`);
+  if (isOpen) {
+    burgerMenuEl.dataset.menuvisible = 'close';
+    [...sections].forEach(section => (section.style.opacity = 1));
+    burgerBtnEl.dataset.button = 'burger-open';
+  } else {
+    burgerMenuEl.dataset.menuvisible = 'open';
+    [...sections]
+      .filter(section => section.dataset.section !== 'header')
+      .forEach(section => (section.style.opacity = 0.5));
+    burgerBtnEl.dataset.button = 'burger-close';
+  }
+  // const iconId = isOpen ? '#burger-menu' : '#icon-icon-';
+  // burgerUseEl.setAttribute('href', `/img/icons.svg${iconId}`);
 });

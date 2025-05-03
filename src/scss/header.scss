@@ -27,18 +27,19 @@
   }
 }
 [data-menu='burger'] {
-  background-color: $bgcolor;
+  background-color: $bgcolor2;
   position: absolute;
+  height: 352px;
   top: 44px;
   right: 0;
 }
-[data-visible='open'] {
+[data-menuvisible='open'] {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transition: opacity 1s ease-out;
 }
-[data-visible='close'] {
+[data-menuvisible='close'] {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -46,7 +47,6 @@
 }
 [data-list='navigation-mob'] {
   width: 206px;
-  height: 352px;
   padding: 40px 24px;
 
   display: flex;
