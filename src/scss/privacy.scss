@@ -1,2 +1,63 @@
-// [data-font='title'] {
-// }
+
+[data-section='privacy'],
+[data-section='terms'],
+[data-section='cookies'] {
+  padding: 40px 16px;
+  @media (min-width: $desktop) {
+    padding: (60px 36px);
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+}
+
+[data-font='body-medium'] {
+  @media (min-width: $desktop) {
+    @include font(20, 24);
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.backicon {
+}
+.heading {
+  margin-top: 36px;
+  margin-bottom: 32px;
+  @media (min-width: $desktop) {
+    margin-top: 52px;
+    margin-bottom: 60px;
+  }
+}
+
+.text {
+  margin-bottom: 16px;
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.description {
+  margin-bottom: 20px;
+  @media (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.cookietypes p {
+  margin-bottom: 20px;
+}
+

@@ -1,0 +1,13 @@
+[data-section='cta'] {
+  background-color: $bgcolor;
+  padding: 40px 60px;
+
+  @media (min-width: $desktop) {
+    padding: 100px 155px 86px;
+  }
+}
+
+// [data-playBtn] {
+//   margin: auto;
+//   text-align: center;
+// }

@@ -1,0 +1,8 @@
+[data-section='advantages'] {
+  background-color: $bgcolor;
+  padding: 40px 16px;
+
+  @media (min-width: $desktop) {
+    padding: 100px 80px;
+  }
+}
