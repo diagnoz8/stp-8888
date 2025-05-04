@@ -18,4 +18,5 @@ burgerBtnEl.addEventListener('click', e => {
   }
   const iconId = isOpen ? '#icon-burger-menu' : '#icon-exit-cross';
   burgerUseEl.setAttribute('href', `/img/sprite.svg${iconId}`);
+
 });
