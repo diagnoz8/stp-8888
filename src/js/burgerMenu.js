@@ -16,6 +16,6 @@ burgerBtnEl.addEventListener('click', e => {
       .forEach(section => (section.style.opacity = 0.5));
     burgerBtnEl.dataset.button = 'burger-close';
   }
-  // const iconId = isOpen ? '#burger-menu' : '#icon-icon-';
-  // burgerUseEl.setAttribute('href', `/img/icons.svg${iconId}`);
+  const iconId = isOpen ? '#icon-burger-menu' : '#icon-exit-cross';
+  burgerUseEl.setAttribute('href', `/img/icons.svg${iconId}`);
 });
