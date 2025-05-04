@@ -10,7 +10,7 @@
   }
 }
 
-[data-icon='icon'] {
+[data-icon='homeicon'] {
   fill: $txtcolor;
 }
 
@@ -51,6 +51,16 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
+  &:hover {
+    background-color: $pressedlightaccent2;
+    color: $black;
+  }
+
+  &:focus {
+    background-color: $pressedDeclineC;
+    outline: none;
+    color: $black;
+  }
 }
 
 [data-element='heading'] {
