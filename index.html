@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/stp-8888/commonHelpers2.js"></script>
-    <link rel="stylesheet" href="/stp-8888/assets/styles-59253e7f.css">
+    <link rel="stylesheet" href="/stp-8888/assets/styles-e161df02.css">
   </head>
   <body>
     <header id="header" data-section="header">
@@ -317,26 +317,32 @@
 
       <section id="reviews" data-section="reviews">
   <h2 class="title-description" data-font="h2">User Reviews</h2>
-  <ul class="reviews-list">
-    <li>
-      <p>Tina G.</p>
-      <p>"Firing those fireballs is so satisfying! Explosions everywhere!"</p>
-      <p>⭐⭐⭐⭐⭐</p>
+  <ul data-element="reviews-list" data-font="body-large">
+    <li class="review-card">
+      <p data-element="review-author">Tina G.:</p>
+      <p class="review-text">
+        "Firing those fireballs is so satisfying! Explosions everywhere!"
+      </p>
+      <p class="review-stars">⭐⭐⭐⭐⭐</p>
     </li>
-    <li>
-      <p>Mark Y.</p>
-      <p>"Love the hero powers and how wild things get during battle."</p>
-      <p>⭐⭐⭐⭐</p>
+    <li class="review-card">
+      <p data-element="review-author">Mark Y.:</p>
+      <p class="review-text">
+        "Love the hero powers and how wild things get during battle."
+      </p>
+      <p class="review-stars">⭐⭐⭐⭐</p>
     </li>
-    <li>
-      <p>Jared K.</p>
-      <p>"Alien waves + fire = pure chaos. I'm hooked."</p>
-      <p>⭐⭐⭐⭐⭐</p>
+    <li class="review-card">
+      <p data-element="review-author">Jared K.:</p>
+      <p class="review-text">"Alien waves + fire = pure chaos. I'm hooked."</p>
+      <p class="review-stars">⭐⭐⭐⭐⭐</p>
     </li>
-    <li>
-      <p>Chloe R</p>
-      <p>"It's fun and silly in the best way. The cutscenes made me laugh."</p>
-      <p>⭐⭐⭐⭐</p>
+    <li class="review-card">
+      <p data-element="review-author">Chloe R.:</p>
+      <p class="review-text">
+        "It's fun and silly in the best way. The cutscenes made me laugh."
+      </p>
+      <p class="review-stars">⭐⭐⭐⭐</p>
     </li>
   </ul>
 </section>
@@ -582,34 +588,236 @@
   <h2 class="title-description" data-font="h2">Advantages</h2>
   <ul class="reviews-list">
     <li>
-      <img src="" width="" height="" alt="" />
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/happy-face-desc.png    1x,
+            ../img/advantages/happy-face-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/happy-face-mob.png    1x,
+            ../img/advantages/happy-face-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/happy-face-mob.png "
+          alt="happy-face"
+          loading="lazy"
+        />
+      </picture>
+
       <p>Hilarious cutscenes and humorous moments</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/efects-lightning-desc.png    1x,
+            ../img/advantages/efects-lightning-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/efects-lightning-mob.png    1x,
+            ../img/advantages/efects-lightning-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/efects-lightning-mob.png"
+          alt="efects-lightning"
+          loading="lazy"
+        />
+      </picture>
       <p>Vivid visual effects and animated combat</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/defend-shield-lightning-desc.png    1x,
+            ../img/advantages/defend-shield-lightning-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/defend-shield-lightning-mob.png    1x,
+            ../img/advantages/defend-shield-lightning-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/defend-shield-lightning-mob.png"
+          alt="defend-shield-lightning"
+          loading="lazy"
+        />
+      </picture>
       <p>Defend unique battlegrounds across the hometown</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/fireball-desc.png    1x,
+            ../img/advantages/fireball-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/fireball-mob.png    1x,
+            ../img/advantages/fireball-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/fireball-mob.png "
+          alt="fireball"
+          loading="lazy"
+        />
+      </picture>
       <p>Explosive fireball mechanics with dynamic physics</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/hero-desc.png    1x,
+            ../img/advantages/hero-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/hero-mob.png    1x,
+            ../img/advantages/hero-mob@2x.png 2x
+          "
+        />
+        <img src="../img/advantages/hero-mob.png " alt="hero" loading="lazy" />
+      </picture>
       <p>Unique fiery heroes with custom skills</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/replayability-desc.png    1x,
+            ../img/advantages/replayability-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/replayability-mob.png    1x,
+            ../img/advantages/replayability-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/replayability-mob.png  "
+          alt="replayability"
+          loading="lazy"
+        />
+      </picture>
       <p>High replayability with increasing challenges</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/free-desc.png    1x,
+            ../img/advantages/free-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/free-mob.png    1x,
+            ../img/advantages/free-mob@2x.png 2x
+          "
+        />
+        <img src="../img/advantages/free-mob.png  " alt="free" loading="lazy" />
+      </picture>
       <p>Free-to-play with engaging content</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/upgrades-desc.png    1x,
+            ../img/advantages/upgrades-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/upgrades-mob.png    1x,
+            ../img/advantages/upgrades-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/upgrades-mob.png  "
+          alt="replayability"
+          loading="lazy"
+        />
+      </picture>
       <p>Progressive hero upgrades and new skills</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/no-internet-desc.png    1x,
+            ../img/advantages/no-internet-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/no-internet-mob.png    1x,
+            ../img/advantages/no-internet-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/no-internet-mob.png "
+          alt="no-internet"
+          loading="lazy"
+        />
+      </picture>
       <p>No internet required</p>
     </li>
     <li>
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ../img/advantages/optimized-desc.png    1x,
+            ../img/advantages/optimized-desc@2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ../img/advantages/optimized-mob.png    1x,
+            ../img/advantages/optimized-mob@2x.png 2x
+          "
+        />
+        <img
+          src="../img/advantages/optimized-mob.png "
+          alt="optimized"
+          loading="lazy"
+        />
+      </picture>
       <p>Optimized for smooth mobile performance</p>
     </li>
   </ul>
