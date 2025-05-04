@@ -1,0 +1,55 @@
+[data-section='how-to-play'] {
+  padding: 40px 8px;
+  [data-font='h2'] {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  background-image: image-set(
+    url('/img/howToPlay/htp-bg-mob.png') 1x,
+    url('/img/howToPlay/htp-bg-mob@2x.png') 2x
+  );
+  @media (min-width: $desktop) {
+    background-image: image-set(
+      url('/img/howToPlay/htp-bg-desc.png') 1x,
+      url('/img/howToPlay/htp-bg-desc@2x.png') 2x
+    );
+    padding: 100px 80px;
+    [data-font='h2'] {
+      margin-bottom: 80px;
+    }
+  }
+}
+[data-el='htp-item'] {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 304px;
+  padding: 8px 16px 8px 0px;
+  align-items: center;
+  picture {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  @media (min-width: $desktop) {
+    width: 1040px;
+    padding: 24px 16px 24px 0px;
+
+    picture {
+      width: 60px;
+      height: 60px;
+      margin-right: 24px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    p {
+      @include font(36, 36);
+    }
+  }
+}
