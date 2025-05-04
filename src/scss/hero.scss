@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   background-color: $bgcolor2;
+  [data-font='h1'] {
+    width: 242px;
+    margin: 16px 23px;
+  }
   @media (min-width: $desktop) {
     flex-direction: row-reverse;
     padding: 100px 80px 100px 120px;

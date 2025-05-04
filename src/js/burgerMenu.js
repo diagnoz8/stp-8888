@@ -1,11 +1,21 @@
-const openBtnEl = document.querySelector('[data-button="burger-open"]');
-const closeBtnEl = document.querySelector('[data-button="burger-close"]');
-const burgerMenuEl = document.querySelector('[data-visible]');
+const burgerBtnEl = document.querySelector('[data-button]');
+const burgerMenuEl = document.querySelector('[data-menu="burger"]');
+const burgerUseEl = document.querySelector('[data-el="burger-use"]');
+const sections = document.querySelectorAll('[data-section]');
+burgerBtnEl.addEventListener('click', e => {
+  const isOpen = burgerMenuEl.dataset.menuvisible === 'open';
 
-openBtnEl.addEventListener('click', e => {
-  burgerMenuEl.dataset.visible = 'open';
-});
-
-closeBtnEl.addEventListener('click', e => {
-  burgerMenuEl.dataset.visible = 'close';
+  if (isOpen) {
+    burgerMenuEl.dataset.menuvisible = 'close';
+    [...sections].forEach(section => (section.style.opacity = 1));
+    burgerBtnEl.dataset.button = 'burger-open';
+  } else {
+    burgerMenuEl.dataset.menuvisible = 'open';
+    [...sections]
+      .filter(section => section.dataset.section !== 'header')
+      .forEach(section => (section.style.opacity = 0.5));
+    burgerBtnEl.dataset.button = 'burger-close';
+  }
+  // const iconId = isOpen ? '#burger-menu' : '#icon-icon-';
+  // burgerUseEl.setAttribute('href', `/img/icons.svg${iconId}`);
 });
