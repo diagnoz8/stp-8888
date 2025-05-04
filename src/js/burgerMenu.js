@@ -17,5 +17,6 @@ burgerBtnEl.addEventListener('click', e => {
     burgerBtnEl.dataset.button = 'burger-close';
   }
   const iconId = isOpen ? '#icon-burger-menu' : '#icon-exit-cross';
-  burgerUseEl.setAttribute('href', `/public/icons.svg${iconId}`);
+  burgerUseEl.setAttribute('href', `/img/sprite.svg${iconId}`);
+
 });
