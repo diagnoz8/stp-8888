@@ -25,7 +25,7 @@ body {
 [data-font='h2'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
-  font-size: 28px;
+  @include font(28, 30);
 
   @media (min-width: $desktop) {
     font-size: 58px;
@@ -35,7 +35,7 @@ body {
 [data-font='h3'] {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  @include font(18, 18);
 
   @media (min-width: $desktop) {
     font-size: 28px;
@@ -142,4 +142,14 @@ body {
   &:active {
     background-color: $pressedcolor;
   }
+}
+[data-el='google-logo'] {
+  width: 24px;
+  height: 24px;
+}
+[data-el='play-link'] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
 }
