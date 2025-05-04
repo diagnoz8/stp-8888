@@ -66,13 +66,12 @@
   @include font(20, 20);
 }
 [data-button='burger-close'] {
-  z-index: 10;
   background-color: transparent;
   border: none;
-  width: 20;
-  height: 20;
-  padding: 4px;
-  [data-el='burger-svg'] {
+  width: 20px;
+  height: 20px;
+  padding: 0%;
+  [data-el='exit-svg'] {
     width: 12px;
     height: 12px;
   }
@@ -98,4 +97,10 @@
 [data-el='burger-use'] {
   fill: $txtcolor;
   stroke: $txtcolor;
+}
+svg[data-visible='false'] {
+  display: none !important;
+}
+svg[data-visible='true'] {
+  display: inline-block !important;
 }
