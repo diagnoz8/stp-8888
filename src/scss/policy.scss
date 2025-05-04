@@ -1,0 +1,81 @@
+[data-section='policy'] {
+  padding: 40px 16px;
+  @media (min-width: $desktop) {
+    padding: (60px 36px);
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+}
+
+[data-icon='icon'] {
+  fill: $txtcolor;
+}
+
+[data-section='policy'] {
+  [data-font='title'][data-element='heading'] {
+    @media (min-width: $desktop) {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      @include font(36, 30);
+    }
+  }
+}
+
+[data-section='policy'] {
+  [data-font='body-medium'][data-font='body-medium'] {
+    @media (min-width: $desktop) {
+      @include font(20, 24);
+    }
+  }
+}
+
+[data-section='policy'] {
+  [data-font='body'] {
+    @media (min-width: $desktop) {
+      @include font(24, 32);
+    }
+  }
+}
+
+[data-element='icon'] {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+[data-element='home'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+[data-element='heading'] {
+  margin-top: 36px;
+  margin-bottom: 32px;
+  @media (min-width: $desktop) {
+    margin-top: 52px;
+    margin-bottom: 60px;
+  }
+}
+
+[data-element='text'] {
+  margin-bottom: 16px;
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+[data-element='description'] {
+  margin-bottom: 20px;
+  @media (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+[data-element='cookietypes'] p {
+  margin-bottom: 20px;
+}

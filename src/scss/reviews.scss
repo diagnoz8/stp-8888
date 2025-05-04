@@ -1,0 +1,25 @@
+[data-section='reviews'] {
+  background-color: $bgcolor;
+  padding: 40px 60px;
+
+  @media (min-width: $desktop) {
+    padding: 100px 155px 86px;
+  }
+}
+
+// #rewiews {
+//   background-image: url('../img/');
+//   background-size: cover;
+//   background-position: center;
+
+//   @media (min-width: 1024px) {
+//     background-image: url('../img/reviews/bg-desktop.jpg');
+//   }
+// }
+
+.reviews-list {
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 30px;
+  }
+}
