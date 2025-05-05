@@ -53,6 +53,14 @@ screen types:
       color: $text-hover;
     }
   }
+  &:focus {
+    @if $bg-hover != null {
+      background-color: $bg-hover;
+    }
+    @if $text-hover != null {
+      color: $text-hover;
+    }
+  }
 }
 
 // EXAMPLE HOW TO USE

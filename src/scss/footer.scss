@@ -38,4 +38,25 @@
     margin-bottom: 18px;
     width: $desktop;
   }
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    &:hover,
+    :focus {
+      @include hover-style(null, $lightaccent);
+    }
+    &:active {
+      @include hover-style(null, $accentcolor);
+    }
+  }
+}
+[data-el='footer-icon'] {
+  width: 16px;
+  height: 16px;
+  @media (min-width: $desktop) {
+    width: 24px;
+    height: 24px;
+  }
 }
