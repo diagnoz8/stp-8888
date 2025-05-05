@@ -2,10 +2,14 @@ body {
   background-color: $bgcolor;
   color: $txtcolor;
 }
-html,
 body {
   overflow-x: hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 [data-section] {
   width: $mobile;
   margin-left: auto;
