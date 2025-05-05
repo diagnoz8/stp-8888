@@ -1,13 +1,26 @@
 [data-section='cta'] {
   background-color: $bgcolor;
-  padding: 40px 60px;
+  padding: 40px 16px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: $desktop) {
-    padding: 100px 155px 86px;
+    padding: 100px 169px;
+  }
+
+  [data-playBtn] {
+    margin-top: 24px;
+
+    @media (min-width: $desktop) {
+      margin-top: 60px;
+    }
   }
 }
 
-// [data-playBtn] {
-//   margin: auto;
-//   text-align: center;
-// }
+[data-cta='text']:not(:last-of-type) {
+  margin-bottom: 32px;
+}

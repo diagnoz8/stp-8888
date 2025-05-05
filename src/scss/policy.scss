@@ -11,7 +11,10 @@
 }
 
 [data-icon='homeicon'] {
-  fill: $txtcolor;
+  fill: none;
+  stroke: $txtcolor;
+  width: 12px;
+  height: 12px;
 }
 
 [data-section='policy'] {
@@ -52,6 +55,9 @@
   gap: 6px;
   text-decoration: none;
   &:hover {
+    [data-icon='homeicon'] {
+      stroke: $black;
+    }
     background-color: $declinedCookies;
     color: $black;
   }
