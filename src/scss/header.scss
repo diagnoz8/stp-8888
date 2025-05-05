@@ -35,10 +35,11 @@ html {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    li:hover {
+    a:hover,
+    a:focus {
       @include hover-style(null, $lightaccent);
     }
-    li:active {
+    a:active {
       @include hover-style(null, $accentcolor);
     }
   }

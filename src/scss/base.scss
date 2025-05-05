@@ -134,10 +134,11 @@ body {
   }
   &:hover {
     animation: none;
-    background-color: $accentcolor;
+    @include hover-style($accentcolor, null);
   }
   &:focus {
-    border: 1px solid $bgcolor;
+    animation: none;
+    @include hover-style($accentcolor, null);
   }
   &:active {
     background-color: $pressedcolor;
