@@ -16,7 +16,7 @@
     <script type="module" crossorigin src="/stp-8888/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8888/assets/vendor-d3d52e02.js">
     <link rel="stylesheet" href="/stp-8888/assets/vendor-1f9fe898.css">
-    <link rel="stylesheet" href="/stp-8888/assets/styles-5a825e7e.css">
+    <link rel="stylesheet" href="/stp-8888/assets/styles-ff7fe91f.css">
   </head>
   <body>
     <header id="header" data-section="header">
@@ -89,24 +89,9 @@
 </section>
 
       <section id="description" data-section="description">
-  <h2 class="title-description" data-font="h2">Description</h2>
-
-  <div class="description-content">
-    <div class="description-text">
-      <p data-font="body" class="description-content">
-        Welcome to Fireball Heroes — A Fiery Quest! Unleash your inner flame and
-        join a team of blazing warriors in their quest to protect their hometown
-        from relentless alien invaders.
-      </p>
-      <p data-font="body">
-        Train by blasting objects and perfecting your aim, then jump into battle
-        to incinerate enemies with explosive fireballs. With exhilarating
-        gameplay, comedic moments, and epic showdowns, this game is your
-        ultimate ticket to action-packed fun!
-      </p>
-    </div>
-
-    <div class="description-image">
+  <h2 data-descriptionn="title" data-font="h2">Description</h2>
+  <div data-descriptionn="content ">
+    <div data-descriptionn="image">
       <picture>
         <source
           srcset="/stp-8888/assets/descr-75f0c97d.png 1x"
@@ -126,6 +111,20 @@
         />
         <img src="/stp-8888/assets/descr-mob-566d16c8.png" alt="description img" />
       </picture>
+    </div>
+
+    <div class="description-text">
+      <p data-font="body" data-descriptionn="paragraph">
+        Welcome to Fireball Heroes — A Fiery Quest! Unleash your inner flame and
+        join a team of blazing warriors in their quest to protect their hometown
+        from relentless alien invaders.
+      </p>
+      <p data-font="body" data-descriptionn="paragraph">
+        Train by blasting objects and perfecting your aim, then jump into battle
+        to incinerate enemies with explosive fireballs. With exhilarating
+        gameplay, comedic moments, and epic showdowns, this game is your
+        ultimate ticket to action-packed fun!
+      </p>
     </div>
   </div>
 </section>
@@ -507,17 +506,23 @@
 </section>
 
       <section id="cta" data-section="cta">
-  <p>
+  <p data-font="body-large" data-cta="text">
     Join the Fireball Heroes and Ignite Your Journey!" Download Fireball Heroes
     now and blast your way through alien chaos!
   </p>
-  <p>Available FREE on Google Play</p>
-  <!-- <a
-    href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
-    data-playBtn
-    data-font="body-large"
-    >Play now</a
-  > -->
+  <p data-font="body-large" data-cta="text">Available FREE on Google Play</p>
+  <button data-playBtn>
+    <a
+      data-el="play-link"
+      href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
+      data-font="body-large"
+    >
+      <svg data-el="google-logo">
+        <use href="/stp-8888/assets/sprite-d21c4077.svg#icon-logo-google-play"></use>
+      </svg>
+      <span> Play now</span>
+    </a>
+  </button>
 </section>
 
       <section id="faq" data-section="faq">
@@ -628,34 +633,28 @@
 </section>
 
       <section id="advantages" data-section="advantages">
-  <h2 class="title-description" data-font="h2">Advantages</h2>
-  <ul class="reviews-list">
-    <li>
+  <h2 data-descriptionn="title" data-font="h2">Advantages</h2>
+  <ul data-advantages="list">
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
-          srcset="
-            ../img/advantages/happy-face-desc.png    1x,
-            ../img/advantages/happy-face-desc@2x.png 2x
-          "
+          srcset="/stp-8888/assets/happy-face-desc-1bdc9e3b.png 1x, /stp-8888/assets/happy-face-desc@2x-d55080e3.png 2x"
         />
         <source
           media="(min-width: 320px)"
-          srcset="
-            ../img/advantages/happy-face-mob.png    1x,
-            ../img/advantages/happy-face-mob@2x.png 2x
-          "
+          srcset="/stp-8888/assets/happy-face-mob-ccf8c732.png 1x, /stp-8888/assets/happy-face-mob@2x-c25ca9c8.png 2x"
         />
         <img
-          src="../img/advantages/happy-face-mob.png "
+          src="/img/advantages/happy-face-mob.png "
           alt="happy-face"
           loading="lazy"
         />
       </picture>
 
-      <p>Hilarious cutscenes and humorous moments</p>
+      <p data-advantages="text">Hilarious cutscenes and humorous moments</p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -677,9 +676,9 @@
           loading="lazy"
         />
       </picture>
-      <p>Vivid visual effects and animated combat</p>
+      <p data-advantages="text">Vivid visual effects and animated combat</p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -701,9 +700,11 @@
           loading="lazy"
         />
       </picture>
-      <p>Defend unique battlegrounds across the hometown</p>
+      <p data-advantages="text">
+        Defend unique battlegrounds across the hometown
+      </p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -725,9 +726,11 @@
           loading="lazy"
         />
       </picture>
-      <p>Explosive fireball mechanics with dynamic physics</p>
+      <p data-advantages="text">
+        Explosive fireball mechanics with dynamic physics
+      </p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -745,9 +748,9 @@
         />
         <img src="../img/advantages/hero-mob.png " alt="hero" loading="lazy" />
       </picture>
-      <p>Unique fiery heroes with custom skills</p>
+      <p data-advantages="text">Unique fiery heroes with custom skills</p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -769,9 +772,11 @@
           loading="lazy"
         />
       </picture>
-      <p>High replayability with increasing challenges</p>
+      <p data-advantages="text">
+        High replayability with increasing challenges
+      </p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -789,9 +794,9 @@
         />
         <img src="../img/advantages/free-mob.png  " alt="free" loading="lazy" />
       </picture>
-      <p>Free-to-play with engaging content</p>
+      <p data-advantages="text">Free-to-play with engaging content</p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -813,9 +818,9 @@
           loading="lazy"
         />
       </picture>
-      <p>Progressive hero upgrades and new skills</p>
+      <p data-advantages="text">Progressive hero upgrades and new skills</p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -837,9 +842,9 @@
           loading="lazy"
         />
       </picture>
-      <p>No internet required</p>
+      <p data-advantages="text">No internet required</p>
     </li>
-    <li>
+    <li data-advantages="item">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -861,7 +866,7 @@
           loading="lazy"
         />
       </picture>
-      <p>Optimized for smooth mobile performance</p>
+      <p data-advantages="text">Optimized for smooth mobile performance</p>
     </li>
   </ul>
 </section>
