@@ -4,7 +4,9 @@ const menuBtnEl = document.querySelector('[data-button]');
 const burgerMenuEl = document.querySelector('[data-menu="burger"]');
 const burgerUseEl = document.querySelector('[data-el="burger-use"]');
 const sections = document.querySelectorAll('[data-section]');
-menuBtnEl.addEventListener('click', e => {
+const menuLis = document.querySelectorAll('[data-li="menuLink"');
+
+const handleMenuEvents = e => {
   const isOpen = burgerMenuEl.dataset.menuvisible === 'open';
 
   if (isOpen) {
@@ -22,4 +24,16 @@ menuBtnEl.addEventListener('click', e => {
     exitBtnIcon.dataset.visible = 'true';
     burgerBtnIcon.dataset.visible = 'false';
   }
+};
+
+menuBtnEl.addEventListener('click', handleMenuEvents);
+
+menuLis.forEach(link => {
+  link.addEventListener('click', () => {
+    burgerMenuEl.dataset.menuvisible = 'close';
+    [...sections].forEach(section => (section.style.opacity = 1));
+    menuBtnEl.dataset.button = 'burger-open';
+    burgerBtnIcon.dataset.visible = 'true';
+    exitBtnIcon.dataset.visible = 'false';
+  });
 });
