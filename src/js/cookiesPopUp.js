@@ -5,12 +5,24 @@ const acceptCookiesBtn = document.querySelector(
 const declineCookiesBtn = document.querySelector(
   '[data-button="decline-cookies"]'
 );
-cookiesPopUp.addEventListener('click', e => {
-  e.preventDefault();
-  isAccepted = e.target === acceptCookiesBtn;
-  if (isAccepted) {
+const hideCookiesPopup = () => {
+  cookiesPopUp.dataset.throw = 'false';
+  setTimeout(() => {
+    cookiesPopUp.remove();
+  }, 350);
+};
+
+if (localStorage.getItem('cookiesAccepted') === null) {
+  cookiesPopUp.dataset.throw = 'true';
+  acceptCookiesBtn.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
-  } else {
+    hideCookiesPopup();
+  });
+
+  declineCookiesBtn.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'false');
-  }
-});
+    hideCookiesPopup();
+  });
+} else {
+  cookiesPopUp.remove();
+}

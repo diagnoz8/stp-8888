@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+[data-section] {
+  scroll-margin-top: 44px;
+}
 [data-section='header'] {
   display: flex;
   flex-direction: row;
