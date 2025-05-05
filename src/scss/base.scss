@@ -1,15 +1,11 @@
 body {
   background-color: $bgcolor;
   color: $txtcolor;
-
-  overflow-y: scroll;
-  scrollbar-width: none;
 }
-
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+html,
+body {
+  overflow-x: hidden;
 }
-
 [data-section] {
   width: $mobile;
   margin-left: auto;
