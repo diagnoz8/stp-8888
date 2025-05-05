@@ -1,7 +1,15 @@
 body {
   background-color: $bgcolor;
   color: $txtcolor;
+
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 [data-section] {
   width: $mobile;
   margin-left: auto;
