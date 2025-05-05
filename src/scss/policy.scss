@@ -11,7 +11,10 @@
 }
 
 [data-icon='homeicon'] {
-  fill: $txtcolor;
+  fill: none;
+  stroke: $txtcolor;
+  width: 12px;
+  height: 12px;
 }
 
 [data-section='policy'] {
@@ -51,15 +54,11 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  &:hover {
-    background-color: $pressedlightaccent2;
-    color: $black;
-  }
-
-  &:focus {
-    background-color: $pressedlightaccent2;
-    outline: none;
-    color: $black;
+  &:hover, :focus {
+    [data-icon='homeicon'] {
+      stroke: $pressedlightaccent2;
+    }
+    @include hover-style(null, $pressedlightaccent2);
   }
 }
 
