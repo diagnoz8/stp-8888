@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     direction: 'horizontal',
     loop: true,
     spaceBetween: 32,
-
+    speed: 800,
     modules: [Navigation],
     navigation: {
       nextEl: '.swiper-button-next',
