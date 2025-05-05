@@ -54,18 +54,11 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  &:hover {
+  &:hover, :focus {
     [data-icon='homeicon'] {
-      stroke: $black;
+      stroke: $pressedlightaccent2;
     }
-    background-color: $declinedCookies;
-    color: $black;
-  }
-
-  &:focus {
-    background-color: $pressedDeclineC;
-    outline: none;
-    color: $black;
+    @include hover-style(null, $pressedlightaccent2);
   }
 }
 

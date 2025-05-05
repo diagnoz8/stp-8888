@@ -1,6 +1,6 @@
 $bgcolor: #1e1e22; // фон
 $txtcolor: #ffffff; //текст ACCEPT COOKIES BG
-$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань  COOKIES BORDER HOVER
+$accentcolor: #ff5722; //для кнопок у спокійному стані та відвіданих посилань  COOKIES BORDER HOVER // LINKS PRESSED
 $accentcolor2: #ff222f; //кнопки
 $pressedcolor: #ff0303; //кнопки
 $gradient: linear-gradient(
@@ -11,6 +11,12 @@ $gradient: linear-gradient(
 $black: #000000;
 $bgcolor2: #1a1a1d;
 $bgcolor3: #26262a;
-$declinedCookies: #ffd8cc;
-$pressedAcceptC: #f1eedf;
-$pressedDeclineC: #ffb098;
+
+$lightaccent: #ffd8cc; //links hover(!), cookies bi=utton
+$pressedlightaccent: #f1eedf; //pressed accept cookies
+$pressedlightaccent2: #ffb098; //pressed decline cookies
+
+// HOVER TRANSITION VARS => look in mixins
+$hover-transition-duration: 0.3s;
+$hover-transition-easing: ease-in-out;
+$hover-transition-props: all;

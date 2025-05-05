@@ -39,3 +39,41 @@ screen types:
 
   line-height: math.div(math.round($result * 100), 100);
 }
+
+// HOVER MIXIN
+@mixin hover-style($bg-hover, $text-hover) {
+  transition: $hover-transition-props $hover-transition-duration
+    $hover-transition-easing;
+
+  &:hover {
+    @if $bg-hover != null {
+      background-color: $bg-hover;
+    }
+    @if $text-hover != null {
+      color: $text-hover;
+    }
+  }
+  &:focus {
+    @if $bg-hover != null {
+      background-color: $bg-hover;
+    }
+    @if $text-hover != null {
+      color: $text-hover;
+    }
+  }
+}
+
+// EXAMPLE HOW TO USE
+// ::::::::::::::::::::::::::::::::::
+// .button {
+//   background-color: $btn-bg;
+//   color: $btn-text;
+//   @include hover-style($btn-bg-hover, $btn-text-hover);
+// }
+
+// If u have to change only ONE PROPERTY
+// ::::::::::::::::::::::::::::::::::::::
+//.link {
+//   color: $txt-color;
+//   @include hover-style(null, $txt-color-hover);
+// }

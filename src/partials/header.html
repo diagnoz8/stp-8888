@@ -1,5 +1,5 @@
 <header id="header" data-section="header">
-  <img src="/img/logo.png" alt="logo" data-el="logo">
+ <a href="/index.html#hero"><img src="/img/logo.png" alt="logo" data-el="logo"></a> 
   <nav>
     <ul data-list="navigation-pc" data-font="title">
          <li><a href="#hero" >Home</a></li>
@@ -12,8 +12,11 @@
         <li><a href="#gallery" >Gallery</a></li>
       </ul>
 <button type="button" data-button="burger-open" >
-    <svg data-el="burger-svg">
+    <svg data-el="burger-svg" data-visible="true">
       <use data-el="burger-use" href="/img/sprite.svg#icon-burger-menu"></use>
+    </svg>
+    <svg data-el="exit-svg" data-visible="false">
+      <use data-el="burger-use" href="/img/sprite.svg#icon-exit-cross"></use>
     </svg>
 </button>
 

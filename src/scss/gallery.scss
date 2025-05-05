@@ -1,0 +1,107 @@
+[data-section='gallery'] {
+  padding: 40px 0px 40px 16px;
+  [data-font='h2'] {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  @media (min-width: $desktop) {
+    padding: 100px 0px 100px 80px;
+    [data-font='h2'] {
+      margin-bottom: 80px;
+    }
+  }
+}
+[data-el='gallery-container'] {
+  position: relative;
+  padding: 0;
+}
+.swiper {
+  width: 304px;
+  height: 344px;
+  position: relative;
+  @media (min-width: $desktop) {
+    width: 1120px;
+    height: 696px;
+  }
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 288px !important;
+  width: 224px !important;
+  @media (min-width: $desktop) {
+    height: 576px !important;
+    width: 448px !important;
+  }
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  flex-shrink: 0;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.swiper-slide picture {
+  width: 244px;
+  @media (min-width: $desktop) {
+    width: 448px;
+  }
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: none !important;
+}
+.swiper-button-prev {
+  transform: rotate(-90deg) translateX(50%) translateY(37.5%) !important;
+  bottom: -16px !important;
+  top: auto !important;
+  left: 70px !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  @media (min-width: $desktop) {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 0;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    left: 372px !important;
+    bottom: -40px !important;
+  }
+}
+.swiper-button-next {
+  transform: rotate(90deg) translateX(-50%) translateY(37.5%);
+  bottom: -16px !important;
+  top: auto !important;
+  right: 70px !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  @media (min-width: $desktop) {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 0;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+    bottom: -40px !important;
+
+    right: 372px !important;
+  }
+}
