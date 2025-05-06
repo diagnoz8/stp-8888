@@ -68,7 +68,6 @@
   font-weight: 400;
   margin-bottom: 24px;
   font-size: 20px;
-  line-height: 100%;
 }
 
 [data-element='review-card'] {
@@ -88,6 +87,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  &:last-child {
+    height: 277px;
+  }
 }
 
 [data-element='review-stars'] {
