@@ -28,7 +28,7 @@
     <script type="module" crossorigin src="/stp-8888/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8888/assets/vendor-d3d52e02.js">
     <link rel="stylesheet" href="/stp-8888/assets/vendor-1f9fe898.css">
-    <link rel="stylesheet" href="/stp-8888/assets/styles-7bfe5534.css">
+    <link rel="stylesheet" href="/stp-8888/assets/styles-19f98993.css">
   </head>
   <body>
     <header id="header" data-section="header">
@@ -89,6 +89,8 @@
       <a
         data-el="play-link"
         href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
+        target="_blank"
+        rel="noopener noreferrer"
         data-font="body-large"
       >
         <svg data-el="google-logo">
@@ -125,7 +127,7 @@
       </picture>
     </div>
 
-    <div class="description-text">
+    <div data-el="description-text">
       <p data-font="body" data-descriptionn="paragraph">
         Welcome to Fireball Heroes — A Fiery Quest! Unleash your inner flame and
         join a team of blazing warriors in their quest to protect their hometown
@@ -144,203 +146,191 @@
       <section data-section="features" id="features">
   <h2 data-font="h2" data-el="features-title">Features</h2>
   <ul data-list="features">
-    <li data-list="features-group1">
+    <li data-box="features-group">
       <ul data-list="features-group1">
         <li data-box="features">
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/heroes-desc-65d322cb.png 1x, /stp-8888/assets/heroes-desc@2x-41d333e9.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,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 1x, /stp-8888/assets/heroes-mob@2x-09eaf6fb.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/heroes-desc-65d322cb.png"
-                alt="little picture 1x1 with dark background of orange and yellow hero"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Unique Heroes</h3>
-            <p data-font="body-medium">
-              Play as a variety of fiery characters, each with their own special
-              moves and personalities
-            </p>
-          </div>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/heroes-desc-65d322cb.png 1x, /stp-8888/assets/heroes-desc@2x-41d333e9.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,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 1x, /stp-8888/assets/heroes-mob@2x-09eaf6fb.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/heroes-desc-65d322cb.png"
+              alt="little picture 1x1 with dark background of orange and yellow hero"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Unique Heroes</h3>
+          <p data-font="body-medium">
+            Play as a variety of fiery characters, each with their own special
+            moves and personalities
+          </p>
         </li>
         <li data-box="features">
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/battles-desc-e9e83aa8.png 1x, /stp-8888/assets/battles-desc@2x-b9eb0b54.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVnSURBVHgBlZZZbFRlFMd/d5k7SzsLFFoKVhbBiKINiwuJCUGMKBgxaDQxoMSEkBgf3IIP8oCC8UFN5MG4kZCoD0Rj2PTFmOCDSwCBqAlLKVtb6TLtTDvLnbnr55kphhYowS+Z3Llzv/udc/7n//+f0dpm3qqq1Sr/dyml0HQdFcpVm3if7vs+N7dCdBWg6qdrmHqUsu2RiPgSQEeTB0r2XBPg5g5XeERlc1C/07QIfYMD7Hl3PhuX30656qAHUXzDv04ApSY+Vp6pUDLXDXzHxtFj1NAYGc6ybuUdPDIrwcK7AuxSlcD0ifjxejLjA0yYs8Ko7TV0BrJFVt85GaeYZ7gYsOKeZr7alOFCdx+3T7IgSBAaeYFJyYHhZaDU+AD1bMd+ZFeohwzmDF5b1cpHGxoFigz3zbD4/s15nDyRRbM1fN+rvSzwpKWyEoYR4kvzDVWDSxsNoK4Dky5dGy4HPHVvwJalAee68sxMhfz49lROH79IKO2ougF62UfpHiM9Q2xb386lrEtUiONrRr2K60JUK7WiIsxPwcerJ3GoN6CUc9j/aiMnjpcp6tJ0x5PsXfqHJVPJ9omFs3jjsTLNqQSmRHc1S/KXAONz1wg0H4MYXq7I7hdncrSrjBba6KFOOQ+92b46FIGvE5X0Pv11hPltk9n9XInOcyXubDMkAZNoUCFQNSTGqETVm2IwVKiwfc1ULvV2E3qBMMigFHqcPXOR5VteZuGGZ+nu7sEWHbRKs37aJND1RIkXPALPxFR1GMY3ubYMEVIgHJ89Sefh2VUKocVAbxa74NNzdoind24jFtFomjuH0IzS1VtiTXuew+dixOwS/YJAT76IGxHFCDbaf02+UoEu5ed55f4pdAgMufP9rP1kM6kFs3lh5xbMShHNq9XtQpPQVqrLj3jY8ptfdskWHbqyJk1iPZ7WIPBcJbRQJD/ZSnPXrCHs02VWbdtITA5bsW4lUdcV8CQf8R55G+Ua/NORp1DSMIIyDYbLN39PJUyCHYGYJ4pQV7HIkZeX3CpfhJ7B9DSti2Zg5R25z2Gl45w4eVZ4HkF5w2TmNPHSd++RnNYsjKrQpbVx8GgnS9JCBq1J7KR8uadjlheEzM1APmvTvmwBXl8WPZUibDT465fjdHx7BCcj4hoY4qEnH8SI5dDjFq4jWIz0s2ddA+eLOk1+HxUjUYPnKh2IejX5DJcqNLY2iGMa/LBrPyPZOAfe2kfLwnlYUoHm+VRLYg1+hAud0tpAzM4usq/TlHdtqnocS1inrm6yaZl0jTgYVhSrrOrG5uc8dqx/n8zMGB0//8nmB7YSJlJUwwLVQSFCt7DG89Bb2vjscJF0Ki6mGBequoxaxRgdREXdv3XptGYSHDvWIwAWmN0+F2VLsa7i5OE+nn/9UbRClcaYyaG9h7EaLCbHDPYdLTJEsq7eqHLqdK/x0kimklvDcNT/NLkO+4rGeIrMqTPcsnQxc9pDOSRO0VGs3bSM2xanceil3NfClx/s5e4p8Ee5hS9OeExKjLrBOG9onTFdeVLiFbVZ5HPD7Ho8TU/HJda/8wy3LBLueRZepZ9ILMmpgzm+3nGABfMaOJpP8OHvNs2ZRiQ3AWT8VNOmTW9V48emWLU4YbHksn0pJEaKJJvjTLmjRcQkij7Zi+uGJJIRPj9lcmwwwjSJX1UWlkBTc1HtxgFGl1g6A0WLezIOS6YHzMCmjEmfqOjIoE5nwSKeNEhqMs3UxJP3WojGBhG0qypDxRPp+478izAFQYu0qDvUTIHDqbus4DphAPNGM9mXQW/KIWlLKozUhr7YgvIoVVwapKGuDPpRtYY4YiWmKQkYRt1OakXVuvEvV+eZBhMjRJUAAAAASUVORK5CYII= 1x, /stp-8888/assets/action-mob@2x-22698245.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/battles-desc-e9e83aa8.png"
-                alt="little picture 1x1 with dark background of orange and yellow fireball"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Heroic Battles</h3>
-            <p data-font="body-medium">
-              Engage in high-energy combat against waves of alien forces
-            </p>
-          </div>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/battles-desc-e9e83aa8.png 1x, /stp-8888/assets/battles-desc@2x-b9eb0b54.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVnSURBVHgBlZZZbFRlFMd/d5k7SzsLFFoKVhbBiKINiwuJCUGMKBgxaDQxoMSEkBgf3IIP8oCC8UFN5MG4kZCoD0Rj2PTFmOCDSwCBqAlLKVtb6TLtTDvLnbnr55kphhYowS+Z3Llzv/udc/7n//+f0dpm3qqq1Sr/dyml0HQdFcpVm3if7vs+N7dCdBWg6qdrmHqUsu2RiPgSQEeTB0r2XBPg5g5XeERlc1C/07QIfYMD7Hl3PhuX30656qAHUXzDv04ApSY+Vp6pUDLXDXzHxtFj1NAYGc6ybuUdPDIrwcK7AuxSlcD0ifjxejLjA0yYs8Ko7TV0BrJFVt85GaeYZ7gYsOKeZr7alOFCdx+3T7IgSBAaeYFJyYHhZaDU+AD1bMd+ZFeohwzmDF5b1cpHGxoFigz3zbD4/s15nDyRRbM1fN+rvSzwpKWyEoYR4kvzDVWDSxsNoK4Dky5dGy4HPHVvwJalAee68sxMhfz49lROH79IKO2ougF62UfpHiM9Q2xb386lrEtUiONrRr2K60JUK7WiIsxPwcerJ3GoN6CUc9j/aiMnjpcp6tJ0x5PsXfqHJVPJ9omFs3jjsTLNqQSmRHc1S/KXAONz1wg0H4MYXq7I7hdncrSrjBba6KFOOQ+92b46FIGvE5X0Pv11hPltk9n9XInOcyXubDMkAZNoUCFQNSTGqETVm2IwVKiwfc1ULvV2E3qBMMigFHqcPXOR5VteZuGGZ+nu7sEWHbRKs37aJND1RIkXPALPxFR1GMY3ubYMEVIgHJ89Sefh2VUKocVAbxa74NNzdoind24jFtFomjuH0IzS1VtiTXuew+dixOwS/YJAT76IGxHFCDbaf02+UoEu5ed55f4pdAgMufP9rP1kM6kFs3lh5xbMShHNq9XtQpPQVqrLj3jY8ptfdskWHbqyJk1iPZ7WIPBcJbRQJD/ZSnPXrCHs02VWbdtITA5bsW4lUdcV8CQf8R55G+Ua/NORp1DSMIIyDYbLN39PJUyCHYGYJ4pQV7HIkZeX3CpfhJ7B9DSti2Zg5R25z2Gl45w4eVZ4HkF5w2TmNPHSd++RnNYsjKrQpbVx8GgnS9JCBq1J7KR8uadjlheEzM1APmvTvmwBXl8WPZUibDT465fjdHx7BCcj4hoY4qEnH8SI5dDjFq4jWIz0s2ddA+eLOk1+HxUjUYPnKh2IejX5DJcqNLY2iGMa/LBrPyPZOAfe2kfLwnlYUoHm+VRLYg1+hAud0tpAzM4usq/TlHdtqnocS1inrm6yaZl0jTgYVhSrrOrG5uc8dqx/n8zMGB0//8nmB7YSJlJUwwLVQSFCt7DG89Bb2vjscJF0Ki6mGBequoxaxRgdREXdv3XptGYSHDvWIwAWmN0+F2VLsa7i5OE+nn/9UbRClcaYyaG9h7EaLCbHDPYdLTJEsq7eqHLqdK/x0kimklvDcNT/NLkO+4rGeIrMqTPcsnQxc9pDOSRO0VGs3bSM2xanceil3NfClx/s5e4p8Ee5hS9OeExKjLrBOG9onTFdeVLiFbVZ5HPD7Ho8TU/HJda/8wy3LBLueRZepZ9ILMmpgzm+3nGABfMaOJpP8OHvNs2ZRiQ3AWT8VNOmTW9V48emWLU4YbHksn0pJEaKJJvjTLmjRcQkij7Zi+uGJJIRPj9lcmwwwjSJX1UWlkBTc1HtxgFGl1g6A0WLezIOS6YHzMCmjEmfqOjIoE5nwSKeNEhqMs3UxJP3WojGBhG0qypDxRPp+478izAFQYu0qDvUTIHDqbus4DphAPNGM9mXQW/KIWlLKozUhr7YgvIoVVwapKGuDPpRtYY4YiWmKQkYRt1OakXVuvEvV+eZBhMjRJUAAAAASUVORK5CYII= 1x, /stp-8888/assets/action-mob@2x-22698245.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/battles-desc-e9e83aa8.png"
+              alt="little picture 1x1 with dark background of orange and yellow fireball"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Heroic Battles</h3>
+          <p data-font="body-medium">
+            Engage in high-energy combat against waves of alien forces
+          </p>
         </li>
         <li data-box="features">
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/powers-desc-26d68ef0.png 1x, /stp-8888/assets/powers-desc@2x-f56a0c3f.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAY2SURBVHgBfZZbiF1XGcd/+37OnNucmTlnLklsMrExaSIhJZUQUqVlDF6KEk0LtUEfVGKtiVCE9kE0oKCCL9UHUfAhFos+VJKahzYD+iIi1VFsS5smpO2Q25kz537b97X77TNpG0rSddiHfdZee33f9//+//86WmW2mvChkcgHPUSP8iSakitMJ9E0jSTRZIVB+p3oAZrSGf+4w9BvN6nJRyUWsTEktDobAdnYJ7Yihq1AAtWIVVYmEz5q6Hd6YCjZzDQIWwuYmjPOXiWKfkPj/Omd7KzuwtR7ElqXYMn4un2A284nRLpJ0E048XCOdqOGoUsuMnfP9oRD1Qr37Q3wR8WbFUhtdw4gOMaCszJJYkPWxXJ56CrGG/R56pEcp797H41ei0ZNcfapLay+Xufw1gJDvy3vpMlEslE0rmacnlLvB9QjKd81Be+0kVokUOiSVIZQ1m6fKWEOEo5+asS+uXmeXtLIyzMjbnHw7mmIElScYbTeIrJz8p7agColQxpI7oUrE0wlLpFk23dDYkxQGXwjZM/8BEG7xRtvx7z4/RInjs5Rv+YzVAPCbpsTS5t4YFOTcz9/jG69kaae0oNbaWXMOM6pzshj/fmvsqjqrLYN1jo9hm2NT+8pcqgywJOg3TDGd12yw4g41hmOAg7eU+ToXpv/vHGdcxdMMk6Ap5fIJR2BTbiYCBrVajZpRAWe3O/wnUMxjjVJ2VFc7lp4kS/QxVhSry3NDMIAc3NlA96a4C9w5qMW//O28s3fXpDfE/LAxlZt1PQCdtRHK8+VRToWnbUm/zy1j7h3icCaRpdZUxquEWJGadE6biXP/cePUV95jTfPLGOWCihlUzQGbJucppsSLepS3PUZqkeeJTNdRU/Vmg1d7IUdfP5nl5if3YnT62N4bYLAozcwsbdt5tW3rnD/Nx5j2GgQC1yNZp9WPWXRkKY0+r/rA1qrNYLSPHu//ke0qR1jZmkz1ZlxaxxpTiQZlwTxM09sZe1Kh/pgDWdocfgXx8ENmLBNwlBh52R1xkLftJuXHj9JtlgkEUZt3lbhwR9domWVpR9dUWoWYyKXO5WqzZcQhkq4Gt/FYHWVnbstjvz4SYZRD9PSmMzaRLFkZGhEgYvW93nu8Z8wUZnB8YcYuWke+Ol1oklRtYjSlL6iBSknU91qZHSPWifkB/ve4ov3Vli9uEr95RX27/mEdCEhdEfo0lQ7EvsQcpPPMPfxMm4/EMbonFkJGGRcCnGVjBpJkI7snPnAi+rtgOVvL/LQ3SPelOzy+TLP/XqZa9caBJ6UOwpRA5dRNBCTUxiBYunp46x3ugyGPg/vhmIQ4VqWBOkSCNgiqLQHlSQVh6cXcfo3+NqBWR7dXOdi16Y76vGVYw8yOZ0XtogYhU25QoH1eos//+EfTE/liSNRt0BnChzR5CLHfn8Re36RXChU1W66aeohTjwglzX4zUrM4ecdymLLS587gJO3+Pvy/2k2PGlyib/+5WU23XuAkmNjiEAzoxF+YKQFoq9f4JkvzeB3m7KjGiNj3up8LW1KZOLx5cW0kYrz5/4tjhmRLwnXNZdwb5l3Vq7yu5PPUCwbdIYxGTPD1Y6iF04gxxOT1QzbSy434gJ24r8H0QaLclKF71ucPmKy2gyZVU2GxYowps9QyOwIvtloxJoheSUlFvwRdt7mkRdcVHlGemNhek0qE+Kwhi27Gu9BJKqVkho9jx8uZWjeqLEtF/BSZ5ZvnfVZruWlMo1s4POv2hx3ZecohQ1qdkw/W2F2SrIXuW/Ra8zkDTxDeiPusHEe3Dxg/Ejx2R1F9odXCSa3cPJvCc++HlMoFzh/xadqGSh7kl+9NuB7L15Hy80z6+tYa5d4dE+G/lDRtip4WlaSDcS/wg8CpE02R20e+uQsv7yc54kzbVmcp5gRl4p91kcal5MF/vSKhyVnRKf4MY6/0ORsq4xenuXgXEQ1bgvm4lvjg8cg0oxxgPd7oHSHblvEUV5gOm6Ki5obB4ZA50uw3KAmAhNcnZwE9eQ+iyuelB12+cKuEss3ZJ28Y4jd3DrGAdKbWCLm4g6uVtg4OPT0r0mSSkXKDRgZWTlGQxxZLXYkvI/HSYSG+JKwxRaa6OKs6Wl263gX25j0KngDrkwAAAAASUVORK5CYII= 1x, /stp-8888/assets/powers-mob@2x-a278fce5.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/powers-desc-26d68ef0.png"
-                alt="little picture 1x1 with dark background of orange and yellow explosion"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Explosive Powers</h3>
-            <p data-font="body-medium">
-              Unlock devastating fire-based skills and unleash them at the right
-              moment
-            </p>
-          </div>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/powers-desc-26d68ef0.png 1x, /stp-8888/assets/powers-desc@2x-f56a0c3f.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,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 1x, /stp-8888/assets/powers-mob@2x-a278fce5.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/powers-desc-26d68ef0.png"
+              alt="little picture 1x1 with dark background of orange and yellow explosion"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Explosive Powers</h3>
+          <p data-font="body-medium">
+            Unlock devastating fire-based skills and unleash them at the right
+            moment
+          </p>
         </li>
       </ul>
     </li>
 
-    <li data-list="features-group2">
+    <li data-box="features-group">
       <ul data-list="features-group2">
         <li data-box="features">
-          
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/defend-desc-4b9f157c.png 1x, /stp-8888/assets/defend-desc@2x-10f4268c.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,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 1x. /img/features/defend-mob@2x.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/defend-desc-4b9f157c.png"
-                alt="little picture 1x1 with dark background of orange and yellow shield with fire"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Defend the Hometown</h3>
-            <p data-font="body-medium">
-              Protect key locations from invading enemies in dynamic
-              battlegrounds
-            </p>
-      
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/defend-desc-4b9f157c.png 1x, /stp-8888/assets/defend-desc@2x-10f4268c.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAWLSURBVHgBjZZZjBzVFYa/W1Xd1ctMb9PtYZA9XhXAIZZYxksUCZEoIqBYwiRSeIt44CEPechToihBeYwQYpNAPCAQArFIPCABFmCEzGIMw0gIscgy2MaDmaV7epnq6equ5VZxqttjbGzA1aruVtWt859z/v/8t1RtckPMzxyKWD7qvCvx8OrlHNblLAqwsWIfFXsSOiPx02D0MGIBFpyI1FnAi3M1LgcgrdoEJnTNcTpdhyDWEjhmYObwBVANA0eXfPYcQNKEOJIzjuSM0fGoLX1PUV/JsbbU4NqqyQP/nGHntEmnbuGsLOP3YnwpIxp27OK2qYSDJJQhK7Sh8fw0fWeF4niGUjXP3q0Wt85cyR/2baQ61QdvDIoW9eUms7MxB48ucOR4jzPLK7Q6PTZUqmgzEijjPAApWUVZBlLmjvKAd17ZT26tg1Ealxo9om6PxRMZ5uaaPPbOKf5ykwDuqXDFZulbLiHJJO5Aw9zKL3/3KIOxGlkt0aQy61ynzD5haPKLiUnGnCZvf2DwxoezzJ2MOHHS5XS9QZiyKGUnODT7KdqHLZvy7NpS4obtaW69eRszuz5n4+QY8x2f2Bh1zFpnQOksSpTRMrswUeW/j77KkfmIYtoizgwoVirCRwpXeRQnstKqDP2+w+FPurx8tMephYAnr9+OE4nCkMqkH+dIVlLKwPKwdArbl5vOGsXyONmMiUpFpH0bN4i4blvMzMY8ZuiKMAPhzCJtB3IalMvynCv8RCJnFQzTTyg3EsUk/wwBSaSnhQ98nyhKpCg9jEICa4yC5fDe4QMoX7OyWqXpOkRGbkSkrNORyDTwpAuSc6wulqk6ixlpAXR7Ilm5pQTETNFudnnw7hkGb77Lf+66mr3XdHjuHzfTWjyDYVrD+YpC0eJAVBbFnD9wxjoHSXgrmZVIptL10IGNEuIHzTVuuGqKuc9OSVVlfr3F4em/7+G2fR1euOe3NBqrkoyH4aekOzJ2Ekqr76NeYBUj7GgIEGmZ3kGB3+9K8+LjVbLXf8Edv9nCjoIjM+PT+lqz/0afcnqMNZkfFXdFzgVRYlL5DyoYBk6oUCNjizptytUM2jWpFtIEs8u8f+91vHVEJtc0ZRhDnITHVgXLDqWykGzKRDsusR5Z43rGxjoDKbGIpDvHV1ZptUxuuUYmUjd5aXaBkDyZ9jx37M3z7ZJHz42w3VWOfulRX2sTupp9u7KsNNZY7PWwE7thlLCxTrBviXIk0DcLmnfrBrdXTrGpUhCDK3LnI4tsnprGGDSwtcsOu00ns5X99x8hW5pm99UldqslDp7I0hX5hyLidR2p6oZanNSiZTjsyKVDgT3FHg8fsDkdFDnw0AJK2jRlBdx54xSFfMz7Z2Jen5snN1WD5RaH/lWjIFbzp2caLHk26Tg8a34ycrl8/n+ctaZIvlNWzLFFl+krNzDDV2y7dievfdTAK29i9ss6h79qstQ1xKds/HqX5/82Sa7f4LljJQ5+WsfOZjFl74iVceEcDBmRi0p0XK6WuOfFk7zt7eSm6GOe/muFSndB5JihXKixKuRvlla9cPcURW+JN+ev4L43TpObqImA9PnCXG/RhUeyU/VlSvv1Rf5923Z2VxfFNGOeOlHmrU9a/HlPjj9Oh8PGPnvM5olZl8mJtLjAaFcT8x9yoEN9aYBkUWIdWqa0Kaq6Zfs4d80YjIXLorQSpnZoeDX+f9TleNukVjCHG5RK1KPMczu2DsMfA1jHiYZ+1BVd5Loht19V4FdTBq9/3eXQSSgUsqKXcKTHSxxa658BSDKRzHIyVPV8CT9oyzAZpAsGE/ICECiLn3y7UOrSm37ipE6ng6lG2/mqrSkNlpnUFtWSxgp8yTuN03YwDXO43yeJJKuHv4ktiLtGQch3MrOUKBwMzzkAAAAASUVORK5CYII= 1x. /img/features/defend-mob@2x.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/defend-desc-4b9f157c.png"
+              alt="little picture 1x1 with dark background of orange and yellow shield with fire"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Defend the Hometown</h3>
+          <p data-font="body-medium">
+            Protect key locations from invading enemies in dynamic battlegrounds
+          </p>
         </li>
         <li data-box="features">
-        
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/comic-desc-51a9f409.png 1x, /stp-8888/assets/comic-desc@2x-6d67cdf4.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,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 1x, /stp-8888/assets/comic-mob@2x-1a0389eb.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/comic-desc-51a9f409.png"
-                alt="little picture 1x1 with dark background of orange and yellow monolog circle with text ha-ha in it"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Comic Chaos</h3>
-            <p data-font="body-medium">
-              Lighthearted humor and quirky cutscenes keep the mood fun and
-              engaging
-            </p>
-          </div>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/comic-desc-51a9f409.png 1x, /stp-8888/assets/comic-desc@2x-6d67cdf4.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,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 1x, /stp-8888/assets/comic-mob@2x-1a0389eb.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/comic-desc-51a9f409.png"
+              alt="little picture 1x1 with dark background of orange and yellow monolog circle with text ha-ha in it"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Comic Chaos</h3>
+          <p data-font="body-medium">
+            Lighthearted humor and quirky cutscenes keep the mood fun and
+            engaging
+          </p>
         </li>
       </ul>
     </li>
 
-    <li data-list="features-group3">
+    <li data-box="features-group">
       <ul data-list="features-group3">
         <li data-box="features">
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/training-desc-7418d997.png 1x, /stp-8888/assets/training-desc@2x-f9449ab6.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,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 1x, /stp-8888/assets/training-mob@2x-1db8771c.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/training-desc-7418d997.png"
-                alt="little picture 1x1 with dark background of orange and yellow magic staff with a ball on the end"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Fireball Training</h3>
-            <p data-font="body-medium">
-              Practice by blasting destructible objects to level up your aim and
-              power
-            </p>
-          </div>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/training-desc-7418d997.png 1x, /stp-8888/assets/training-desc@2x-f9449ab6.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,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 1x, /stp-8888/assets/training-mob@2x-1db8771c.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/training-desc-7418d997.png"
+              alt="little picture 1x1 with dark background of orange and yellow magic staff with a ball on the end"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Fireball Training</h3>
+          <p data-font="body-medium">
+            Practice by blasting destructible objects to level up your aim and
+            power
+          </p>
         </li>
         <li data-box="features">
-          
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/effects-desc-e831ec23.png 1x, /stp-8888/assets/effects-desc@2x-b2c33d59.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVnSURBVHgBlVZbaBxlFP7+ue7MTrLZ2M0maW2tRVpsba1FaRW0+KCIIhJ8USxFFKGIVXyooFB88Ipv9qHggw/WolIQi1DBl+pLTb1Ab6i09t7mtkl2s7M7szsz/4zfzHaTFArRGf4k++/5z3/O933nnIhlgwOJSJA93d/pkwgs/dB+KTNlsdMl/SUx/od554KlTRK+gm/McFX4fpiGle13v//PF6SwdFeaWboU+g2FCTvyUafzV7fejkpYhyZVftm+cUF8y5Uk8tYZJEmysISALV3MqUWUrRAf7l0Bo5YgTgy6DmlD+zjObJfMINtQFLQ8H5WZJhERUJlOQ9WRi9qQsYb2bMzYDIT6DJSgnw5CSKGhOlNDLEMsBi/z14VCjRkP/2jXfex6ai3OHXgQU5MNRERCVxixJqAxGyOu89IIZmijabsIvV7oag3h6E4otFXRRiyMjDNB+/kMYqFAjyOIHgeffHMaV8YqGP98C2YmmtAYQFvJoeKF+OCIhoD2gWYCroaiXcHEd8/guV2HMO3rCESO9gGzUDL4xMDAQLcKuBGiRUcFkndtPMbhPSVs3XY3yiPfY+1QEU/fRZ+tNgy9D1+ebiGnxrh+bDtGdozi8BkXw44GXzEy2EQiMl5Eqdy5IPuQ4UWMKQKLh69Vcti4Yg4PrFyOF++XmBubgCcs2EYTzrI78PrBKTQhcb5uopQHIr7dYEXMRTkrXbV0mEk1qnFToJY4KOZqGB4qY/f6OsYmXDQMEzJdwoE7OY6DO01MeQWU8xJhkjrXuTSkTGSuUm7tfP7d1LVKxdSaEVxK0PNjBF6DUnSw/1nAq7YR5XViq6JArlqstUhlYBRGvxPhyFkDgSvRbMXwPF5BQehanOlJ65JcI4FvPrIKb4zUEdZKyBdaWLl7DIOOg6vtAE6kgfWGpt/AxofWQwkljp88i3WOgodX5XHoZR3Tcw5KdhMjXwU4c52iYZVqXd32WBo+++0qfjrnw48CEtWEwRwtTSJH4hJDQaPewOZt9yA/nCPBeTi/n8RVexi/Xr6CJ/f1wVUCFGUdp5sFOIpMhUo/1Gqq17S6U3ldmezDec/FWF3DbKjjjykbFolXCaukygaHBtFjmzj352WsHrBw9JKEahTxl2+g6rZwptVPGFPqOxUgSqVS0q24AJSCaLH/cEuPIGsW66OKysfrcPziGPQm28bqPJqyD/GlU+gZuA+b3hvFsuIaqNosnZpsLQpdS8IiM9HMF1pC5s2kTlhYRiR8dkbBjkeBb9++Fyv2XkRxWQmKbaEywUY3eQFq/wZsen8U7o+vwAguoKroDCyiAtN2kaA7KRTRhYibAWtdJib8WhUvbLHw6d71eP6jf9AKIpTUWUQ6VWPr6GVBnZ2u80gv9rzzNS4fewwFt4GQ5xPcKDClE/u8ilgQCBi56SnYvrGML9iLVm75Aa6twXYT7PvlNgi/Bl0PIPUeVOjfKvjYf6oM462/MXXicfRtPgrDihhoT4ZENkcWWgUbGmESYg79VhGmiHBp2oBpNdCMB7HGnMbm5XnMyQYKqsHWUIOWH2JkEaq1KTyxbgg/j7uEWWaDKY08TjPpXpD+0DgSI7be1ManUU5l55QmarKF1zbk8NImgTFarmHlbj8g4EVhp6kRGj+y0EuBtFMuGL3GYGP6m4coZUFSSSKhcpUWerkTxRbxpAOjDyfqIU65OqRXR9Ue4ugcR9u4DSYvV2UCO51ujExNz6eXpgCJmyDKmvaNXBb+V0gHfZqyZAVXWzoS4o/IQ7nI2KiahRg7o1OIm2fYok+iM/4WXef7PlR2RAmbjA5jqGDjTqcBhzzFhCWg7hefV7gXp6140fMvZDJ9f/iJ9VIAAAAASUVORK5CYII= 1x, /stp-8888/assets/effects-mob@2x-fd187f0b.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/effects-desc-e831ec23.png"
-                alt="little picture 1x1 with dark background of orange and yellow lamp surrounded by rays"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Special Effects</h3>
-            <p data-font="body-medium">
-              Enjoy satisfying explosions, glowing flame trails, and cinematic
-              action shots
-            </p>
-          </div>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/effects-desc-e831ec23.png 1x, /stp-8888/assets/effects-desc@2x-b2c33d59.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVnSURBVHgBlVZbaBxlFP7+ue7MTrLZ2M0maW2tRVpsba1FaRW0+KCIIhJ8USxFFKGIVXyooFB88Ipv9qHggw/WolIQi1DBl+pLTb1Ab6i09t7mtkl2s7M7szsz/4zfzHaTFArRGf4k++/5z3/O933nnIhlgwOJSJA93d/pkwgs/dB+KTNlsdMl/SUx/od554KlTRK+gm/McFX4fpiGle13v//PF6SwdFeaWboU+g2FCTvyUafzV7fejkpYhyZVftm+cUF8y5Uk8tYZJEmysISALV3MqUWUrRAf7l0Bo5YgTgy6DmlD+zjObJfMINtQFLQ8H5WZJhERUJlOQ9WRi9qQsYb2bMzYDIT6DJSgnw5CSKGhOlNDLEMsBi/z14VCjRkP/2jXfex6ai3OHXgQU5MNRERCVxixJqAxGyOu89IIZmijabsIvV7oag3h6E4otFXRRiyMjDNB+/kMYqFAjyOIHgeffHMaV8YqGP98C2YmmtAYQFvJoeKF+OCIhoD2gWYCroaiXcHEd8/guV2HMO3rCESO9gGzUDL4xMDAQLcKuBGiRUcFkndtPMbhPSVs3XY3yiPfY+1QEU/fRZ+tNgy9D1+ebiGnxrh+bDtGdozi8BkXw44GXzEy2EQiMl5Eqdy5IPuQ4UWMKQKLh69Vcti4Yg4PrFyOF++XmBubgCcs2EYTzrI78PrBKTQhcb5uopQHIr7dYEXMRTkrXbV0mEk1qnFToJY4KOZqGB4qY/f6OsYmXDQMEzJdwoE7OY6DO01MeQWU8xJhkjrXuTSkTGSuUm7tfP7d1LVKxdSaEVxK0PNjBF6DUnSw/1nAq7YR5XViq6JArlqstUhlYBRGvxPhyFkDgSvRbMXwPF5BQehanOlJ65JcI4FvPrIKb4zUEdZKyBdaWLl7DIOOg6vtAE6kgfWGpt/AxofWQwkljp88i3WOgodX5XHoZR3Tcw5KdhMjXwU4c52iYZVqXd32WBo+++0qfjrnw48CEtWEwRwtTSJH4hJDQaPewOZt9yA/nCPBeTi/n8RVexi/Xr6CJ/f1wVUCFGUdp5sFOIpMhUo/1Gqq17S6U3ldmezDec/FWF3DbKjjjykbFolXCaukygaHBtFjmzj352WsHrBw9JKEahTxl2+g6rZwptVPGFPqOxUgSqVS0q24AJSCaLH/cEuPIGsW66OKysfrcPziGPQm28bqPJqyD/GlU+gZuA+b3hvFsuIaqNosnZpsLQpdS8IiM9HMF1pC5s2kTlhYRiR8dkbBjkeBb9++Fyv2XkRxWQmKbaEywUY3eQFq/wZsen8U7o+vwAguoKroDCyiAtN2kaA7KRTRhYibAWtdJib8WhUvbLHw6d71eP6jf9AKIpTUWUQ6VWPr6GVBnZ2u80gv9rzzNS4fewwFt4GQ5xPcKDClE/u8ilgQCBi56SnYvrGML9iLVm75Aa6twXYT7PvlNgi/Bl0PIPUeVOjfKvjYf6oM462/MXXicfRtPgrDihhoT4ZENkcWWgUbGmESYg79VhGmiHBp2oBpNdCMB7HGnMbm5XnMyQYKqsHWUIOWH2JkEaq1KTyxbgg/j7uEWWaDKY08TjPpXpD+0DgSI7be1ManUU5l55QmarKF1zbk8NImgTFarmHlbj8g4EVhp6kRGj+y0EuBtFMuGL3GYGP6m4coZUFSSSKhcpUWerkTxRbxpAOjDyfqIU65OqRXR9Ue4ugcR9u4DSYvV2UCO51ujExNz6eXpgCJmyDKmvaNXBb+V0gHfZqyZAVXWzoS4o/IQ7nI2KiahRg7o1OIm2fYok+iM/4WXef7PlR2RAmbjA5jqGDjTqcBhzzFhCWg7hefV7gXp6140fMvZDJ9f/iJ9VIAAAAASUVORK5CYII= 1x, /stp-8888/assets/effects-mob@2x-fd187f0b.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/effects-desc-e831ec23.png"
+              alt="little picture 1x1 with dark background of orange and yellow lamp surrounded by rays"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Special Effects</h3>
+          <p data-font="body-medium">
+            Enjoy satisfying explosions, glowing flame trails, and cinematic
+            action shots
+          </p>
         </li>
         <li data-box="features">
-        
-            <picture data-pic="features">
-              <source
-                media="(min-width: 1200px)"
-                srcset="/stp-8888/assets/action-desc-42c2893d.png 1x, /stp-8888/assets/action-desc@2x-b39a39a3.png 2x"
-              />
-              <source
-                media="(min-width: 320px)"
-                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVRSURBVHgBhZVZiFtVGMd/d08my2TSJNNpp63aVqkioq2OUqi4gIoyVR8UXxRRUcQNFRR38KVu4JMKLoi4vikVtaVUsFT6IEXsQunmtJ1Op5PJZJ8kd/W7STpN27E94SbnnnznW/7n//2Pkl2YCwiYZ4SLSs+8M5S5qXKOXaDQY9cx1Od33uvg7Pn57M5dV7nACLrfgWTki3nQ3hicY9NenyfWBQN4ioYa2Kh6HHW2StVuiR8bRzFlc6MbwSBQXRTPF2g6TxC48ngXDmD6Nr6fZCqfZ/v7a1l/WRRHjWJ6Nq7Sx6xuUm7WMMRZu5Kg85wXovAg20fXPjVfnKhckgzINE7wzG1ZinmHqFQ1Uw+4yqry3M0LmfaSqL7Ttu9ljdrrtM0QT7C2FAqFWYpGS7IxcX2d265McbQ0QzZloqkNTlRc3llvsfn5S8mYLjjTNPV+cR9BF4j+t4JAotTGy2x9bTWPDQ+yIGrTyp9gYSaJWytRni7zwR0xdm1YwZ3LKxRnyuw4WMG0+kl4k+i+L+djtStpJ57JZduQaXSYoIjBdGDxynUe911RIhpJU2wlqTUdmkEIjcfAJS5/70mwc7dKZlhlw8bDWP1LcbyT4iFGQm9KkNChEETpluEjpXebIxUp88nmFscGh7F9i1Z1ipbTJOFWaUbTjLxc4P1fJ9AXmziGyw2rF6GVjlL88lau0Avkjaw474CjZAdzIfooaq0d0VEMWrbKbLkJAm02YXH39Qt44Zo6Y60Bbv9wF9veGGFVssKB6gyRhslQfIBGtMiR4x5Vp5/RLybJxRR8obh+CnvNMYUtaWqTR3jwxpU8dXuGBVaRY1N1XvrJYXRnHiPq8MHja1g0u5fdykoSzSQF1UA3HBrjAZrgvCwj7SjVIlCFoxvAx9VjlE/+y69vrmVNbIzxUgXbi9Mv/258qMHHf63k9R+PMZobZ6KRYe8hhye/PShVx7hpWYSPHk1QyiMwVlA1S7LvYVE4rdUd3hu9mEFtAqdusuN4iqe/meK3fTZTbppHrm6RMmy2F7Ks5ASv/HyYhdkUiaEsf864fLmphqVV2XssIg0okAsZwsTVtsYI9rpTYP26Rfj1ST77J86TX4+xrTTMq5scXvq+QKla4/NHl/L4p3vZE7+FFJ7IiElc+J+MWWyd1IhaBktSCpovMtFbQShjyxblYGacSCTDF9uOMpDrk3IPsCBeZ+N+jz8m+8gpeR5et5Rb3vqFYjSD4TaZVRM0XJ8rkzaTlSZJZZaoqZ3u5E4HBxTKImIiZIcqaVYIQ2xfk1JzojtDJK2AZ786hBWJ88RlVdavXUJlpkYtIk3pRYhWi9xzYw6v1GJ/rY+6486JhRaLxd4SxMiX6oxcOkRqaheXr7qWLTv2My1B/PoE39wbp29oCe/+cpK7Vg+yxjrJyPI4zWmLGxZXeXE0i3aoRDqr8/aWOlWRDE2aMmwrJZfLtaXNFf73e0V+uD/Nvuk8VnqIyQmVFQM66dgUD3znMm4Mc5E9xoZ7U5K1QqlvmsisNKhnEVksTNsSZ9NRl2TEFGy6t0RWAoQVaHLqZRG2VdYMb96cJWFPoarC774Yr/9usKesk9KalJUB6sLHdYstRnIKhnTyYenRrfs0ylGTmK4R8ZrY0hQh9N1O7ihpeF/ZGFQqdZbnJDN5Hyt46JZKn64Ib5TOXSspuapGUzo9kEvGNHUMxelS8xTxO3f1GQHmFFU+miK6HiqjhNV6/qHnbW41zLRNS49TMq10aaoz75BLUTjuS1Q93BSc3jivtaLM7Ts7sD6/ex/D93relK6Tcy/8Mx2eGTD8/Q+liVonMl29XAAAAABJRU5ErkJggg== 1x, /stp-8888/assets/action-mob@2x-22698245.png 2x"
-              />
-              <img
-                src="/stp-8888/assets/action-desc-42c2893d.png"
-                alt="little picture 1x1 with dark background of orange and yellow endless sign and little explosion in background"
-                loading="lazy"
-              />
-            </picture>
-            <h3 data-font="h3">Endless Action</h3>
-            <p data-font="body-medium">
-              Replay levels, boost your heroes, and challenge yourself in harder
-              modes
-            </p>
+          <picture data-pic="features">
+            <source
+              media="(min-width: 1200px)"
+              srcset="/stp-8888/assets/action-desc-42c2893d.png 1x, /stp-8888/assets/action-desc@2x-b39a39a3.png 2x"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVRSURBVHgBhZVZiFtVGMd/d08my2TSJNNpp63aVqkioq2OUqi4gIoyVR8UXxRRUcQNFRR38KVu4JMKLoi4vikVtaVUsFT6IEXsQunmtJ1Op5PJZJ8kd/W7STpN27E94SbnnnznW/7n//2Pkl2YCwiYZ4SLSs+8M5S5qXKOXaDQY9cx1Od33uvg7Pn57M5dV7nACLrfgWTki3nQ3hicY9NenyfWBQN4ioYa2Kh6HHW2StVuiR8bRzFlc6MbwSBQXRTPF2g6TxC48ngXDmD6Nr6fZCqfZ/v7a1l/WRRHjWJ6Nq7Sx6xuUm7WMMRZu5Kg85wXovAg20fXPjVfnKhckgzINE7wzG1ZinmHqFQ1Uw+4yqry3M0LmfaSqL7Ttu9ljdrrtM0QT7C2FAqFWYpGS7IxcX2d265McbQ0QzZloqkNTlRc3llvsfn5S8mYLjjTNPV+cR9BF4j+t4JAotTGy2x9bTWPDQ+yIGrTyp9gYSaJWytRni7zwR0xdm1YwZ3LKxRnyuw4WMG0+kl4k+i+L+djtStpJ57JZduQaXSYoIjBdGDxynUe911RIhpJU2wlqTUdmkEIjcfAJS5/70mwc7dKZlhlw8bDWP1LcbyT4iFGQm9KkNChEETpluEjpXebIxUp88nmFscGh7F9i1Z1ipbTJOFWaUbTjLxc4P1fJ9AXmziGyw2rF6GVjlL88lau0Avkjaw474CjZAdzIfooaq0d0VEMWrbKbLkJAm02YXH39Qt44Zo6Y60Bbv9wF9veGGFVssKB6gyRhslQfIBGtMiR4x5Vp5/RLybJxRR8obh+CnvNMYUtaWqTR3jwxpU8dXuGBVaRY1N1XvrJYXRnHiPq8MHja1g0u5fdykoSzSQF1UA3HBrjAZrgvCwj7SjVIlCFoxvAx9VjlE/+y69vrmVNbIzxUgXbi9Mv/258qMHHf63k9R+PMZobZ6KRYe8hhye/PShVx7hpWYSPHk1QyiMwVlA1S7LvYVE4rdUd3hu9mEFtAqdusuN4iqe/meK3fTZTbppHrm6RMmy2F7Ks5ASv/HyYhdkUiaEsf864fLmphqVV2XssIg0okAsZwsTVtsYI9rpTYP26Rfj1ST77J86TX4+xrTTMq5scXvq+QKla4/NHl/L4p3vZE7+FFJ7IiElc+J+MWWyd1IhaBktSCpovMtFbQShjyxblYGacSCTDF9uOMpDrk3IPsCBeZ+N+jz8m+8gpeR5et5Rb3vqFYjSD4TaZVRM0XJ8rkzaTlSZJZZaoqZ3u5E4HBxTKImIiZIcqaVYIQ2xfk1JzojtDJK2AZ786hBWJ88RlVdavXUJlpkYtIk3pRYhWi9xzYw6v1GJ/rY+6486JhRaLxd4SxMiX6oxcOkRqaheXr7qWLTv2My1B/PoE39wbp29oCe/+cpK7Vg+yxjrJyPI4zWmLGxZXeXE0i3aoRDqr8/aWOlWRDE2aMmwrJZfLtaXNFf73e0V+uD/Nvuk8VnqIyQmVFQM66dgUD3znMm4Mc5E9xoZ7U5K1QqlvmsisNKhnEVksTNsSZ9NRl2TEFGy6t0RWAoQVaHLqZRG2VdYMb96cJWFPoarC774Yr/9usKesk9KalJUB6sLHdYstRnIKhnTyYenRrfs0ylGTmK4R8ZrY0hQh9N1O7ihpeF/ZGFQqdZbnJDN5Hyt46JZKn64Ib5TOXSspuapGUzo9kEvGNHUMxelS8xTxO3f1GQHmFFU+miK6HiqjhNV6/qHnbW41zLRNS49TMq10aaoz75BLUTjuS1Q93BSc3jivtaLM7Ts7sD6/ex/D93relK6Tcy/8Mx2eGTD8/Q+liVonMl29XAAAAABJRU5ErkJggg== 1x, /stp-8888/assets/action-mob@2x-22698245.png 2x"
+            />
+            <img
+              src="/stp-8888/assets/action-desc-42c2893d.png"
+              alt="little picture 1x1 with dark background of orange and yellow endless sign and little explosion in background"
+              loading="lazy"
+            />
+          </picture>
+          <h3 data-font="h3">Endless Action</h3>
+          <p data-font="body-medium">
+            Replay levels, boost your heroes, and challenge yourself in harder
+            modes
+          </p>
         </li>
       </ul>
     </li>
@@ -528,6 +518,8 @@
       data-el="play-link"
       href="https://play.google.com/store/apps/details?id=io.popscreen.fireballheroes&hl=en&gl=us"
       data-font="body-large"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <svg data-el="google-logo">
         <use href="/stp-8888/assets/sprite-d21c4077.svg#icon-logo-google-play"></use>
@@ -1086,7 +1078,7 @@
   </div>
 </section>
 
-      <div data-popup="cookies">
+      <div data-popup="cookies" data-throw>
   <h2 data-font="title">Cookies Policy</h2>
   <p data-font="body-medium">
     We use cookies to improve your experience on our website. By browsing this
