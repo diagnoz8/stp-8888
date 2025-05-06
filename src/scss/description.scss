@@ -54,7 +54,7 @@
   }
 }
 
-.description-text {
+[data-descriptionn='text'] {
   @media (min-width: $desktop) {
     max-width: 50%;
     line-height: 100%;
