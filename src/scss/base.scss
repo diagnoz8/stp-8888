@@ -9,6 +9,9 @@ body {
 body {
   overflow-x: hidden;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 * {
   box-sizing: border-box;
@@ -27,17 +30,17 @@ body {
 [data-font='h1'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
-  @include font(36, 40);
+  font-size: 36px;
+
   @media (min-width: $desktop) {
     font-size: 64px;
-    line-height: 1.23;
   }
 }
 
 [data-font='h2'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
-  font-size: 28px;
+  @include font(28, 30);
 
   @media (min-width: $desktop) {
     font-size: 58px;
@@ -47,7 +50,7 @@ body {
 [data-font='h3'] {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  @include font(18, 18);
 
   @media (min-width: $desktop) {
     font-size: 28px;
@@ -83,10 +86,10 @@ body {
 [data-font='body-large'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  @include font(20, 20);
 
   @media (min-width: $desktop) {
-    font-size: 36px;
+    @include font(36, 36);
   }
 }
 
@@ -103,10 +106,11 @@ body {
 [data-font='body'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+
+  @include font(14, 14);
 
   @media (min-width: $desktop) {
-    font-size: 24px;
+    @include font(24, 32);
   }
 }
 // PLAY BUTTONS
