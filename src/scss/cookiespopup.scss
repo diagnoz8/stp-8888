@@ -12,6 +12,32 @@
   transition: opacity 500ms ease-in-out;
   opacity: 1;
   z-index: 1000;
+  @media (min-width: $desktop) {
+    gap: 40px;
+    padding: 60px 80px;
+    font-family: 'Inter', serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 30px;
+    align-items: center; // Центрує контент по горизонталі
+    text-align: center;
+    // @include font(20, 20);
+  }
+  [data-font='title'] {
+    @media (min-width: $desktop) {
+      font-family: 'Inter', serif;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 30px;
+      // @include font(20, 20);
+    }
+  }
+  [data-font='body-medium'] {
+    @media (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 100%;
+    }
+  }
   h2 {
     text-align: center;
   }
@@ -44,4 +70,17 @@
 [data-throw='false'] {
   opacity: 0;
   pointer-events: none;
+}
+
+[data-popup='buttons'] {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  // @media (min-width: $desktop) {
+  //   display: flex;
+  //   gap: 24px;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
 }

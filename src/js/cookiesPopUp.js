@@ -7,6 +7,7 @@ const declineCookiesBtn = document.querySelector(
 );
 const hideCookiesPopup = () => {
   cookiesPopUp.dataset.throw = 'false';
+  document.body.classList.remove('no-scroll'); // Дозволити скрол
   setTimeout(() => {
     cookiesPopUp.remove();
   }, 350);
@@ -14,6 +15,7 @@ const hideCookiesPopup = () => {
 
 if (localStorage.getItem('cookiesAccepted') === null) {
   cookiesPopUp.dataset.throw = 'true';
+  document.body.classList.add('no-scroll'); // Заборонити скрол
   acceptCookiesBtn.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     hideCookiesPopup();
