@@ -30,17 +30,17 @@ body.no-scroll {
 [data-font='h1'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
-  font-size: 36px;
-
+  @include font(36, 40);
   @media (min-width: $desktop) {
     font-size: 64px;
+    line-height: 1.23;
   }
 }
 
 [data-font='h2'] {
   font-family: 'Texturina', serif;
   font-weight: 400;
-  @include font(28, 30);
+  font-size: 28px;
 
   @media (min-width: $desktop) {
     font-size: 58px;
@@ -50,7 +50,7 @@ body.no-scroll {
 [data-font='h3'] {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  @include font(18, 18);
+  font-size: 18px;
 
   @media (min-width: $desktop) {
     font-size: 28px;
@@ -86,10 +86,10 @@ body.no-scroll {
 [data-font='body-large'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  @include font(20, 20);
+  font-size: 20px;
 
   @media (min-width: $desktop) {
-    @include font(36, 36);
+    font-size: 36px;
   }
 }
 
@@ -106,11 +106,10 @@ body.no-scroll {
 [data-font='body'] {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-
-  @include font(14, 14);
+  font-size: 14px;
 
   @media (min-width: $desktop) {
-    @include font(24, 32);
+    font-size: 24px;
   }
 }
 // PLAY BUTTONS
