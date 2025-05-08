@@ -58,13 +58,13 @@ html {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity 1s ease-out;
+  transition: opacity 500ms ease-out;
 }
 [data-menuvisible='close'] {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 1s ease-in, visibility 0s linear 1s;
+  transition: opacity 500ms ease-in, visibility 0s linear 1s;
 }
 [data-list='navigation-mob'] {
   width: 206px;

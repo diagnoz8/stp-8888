@@ -123,11 +123,15 @@ body.no-scroll {
   }
 }
 [data-playBtn] {
+  display: inline-flex;
+  align-items: center;
   width: 288px;
   height: 78px;
   border-radius: 24px;
-  padding: 24px 80px 24px 80px;
+  padding: 24px 80px;
   border-radius: 24px;
+  gap: 16px;
+
   color: $txtcolor;
   background-color: $accentcolor;
   animation-name: btnAnimation;
@@ -139,12 +143,10 @@ body.no-scroll {
   @media (min-width: $desktop) {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    [data-font='body-large'] {
-      font-size: 24px;
-      line-height: 24px;
-    }
+    font-size: 24px;
+    line-height: 24px;
     width: 242px;
-    padding: 24px 48px 24px 48px;
+    padding: 24px 48px;
   }
   &:hover {
     animation: none;
@@ -161,10 +163,4 @@ body.no-scroll {
 [data-el='google-logo'] {
   width: 24px;
   height: 24px;
-}
-[data-el='play-link'] {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
 }
