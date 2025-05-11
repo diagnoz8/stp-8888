@@ -1,2 +1,1 @@
-# Vanilla-vite-template
-
+Landing page for game Fireball Heroes
